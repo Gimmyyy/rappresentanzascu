@@ -150,7 +150,7 @@
     .tavolo:hover{background:var(--bg-sub)}
     .tavolo-number{font-size:var(--text-xs);font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--text-3)}
     .tavolo h3{font-size:var(--text-base);font-weight:700;letter-spacing:-.015em}
-    .tavolo p{font-size:var(--text-sm);color:var(--text-2);line-height:1.65;flex:1}
+    .tavolo p{font-size:var(--text-sm);color:var(--text-2);line-height:1.65;flex:0}
     .tavolo-members{display:flex;align-items:center;gap:.4rem;font-size:var(--text-xs);color:var(--text-3);margin-top:.5rem}
 
     /* FORM */
@@ -314,7 +314,7 @@
     <div class="section">
       <div class="wrap">
         <p class="section-label">Risorse rapide</p>
-        <h2 class="section-title">Link istituzionali.</h2>
+        <h2 class="section-title">Link istituzionali</h2>
         <div class="doc-list">
           <a class="doc-row" href="https://www.regione.campania.it/regione/it/tematiche/servizio-civile-dv3bzpt9" target="_blank" rel="noopener noreferrer">
             <div class="doc-icon-wrap" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
@@ -335,6 +335,467 @@
       </div>
     </div>
   </div>
+
+  <!-- ══════════════ RAPPRESENTANZA ══════════════ -->
+  <div class="page" id="page-rappresentanza" role="region" aria-label="Rappresentanza">
+    <div class="hero" style="padding-bottom:var(--sp-10)">
+      <div class="wrap">
+        <p class="hero-eyebrow">La rappresentanza</p>
+        <h1 class="hero-title" style="font-size:var(--text-xl);max-width:none">Chi rappresenta i volontari del SCU in Campania.</h1>
+        <p class="hero-sub" style="margin-bottom:0">Scopri i delegati e i rappresentanti regionali eletti dagli operatori volontari, anno per anno.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">Cos'è la rappresentanza</p>
+        <h2 class="section-title">Un ruolo riconosciuto a tutela dei volontari.</h2>
+        <p class="section-desc">La rappresentanza degli operatori volontari del SCU è lo strumento con cui i giovani in servizio partecipano alla vita istituzionale, favorendo il dialogo con Regione Campania e Dipartimento per le Politiche Giovanili. È articolata in delegati regionali e rappresentanti regionali, con raccordo al livello nazionale tramite la Consulta SCU.</p>
+        <div class="card-grid">
+          <div class="card">
+            <div class="card-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3>Delegati regionali</h3>
+            <p>Favoriscono il raccordo con la Regione Campania e le assemblee degli operatori volontari sul territorio.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <h3>Rappresentanti regionali</h3>
+            <p>Eletti dai delegati, partecipano alle assemblee nazionali e portano la voce della Campania nelle sedi istituzionali.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <h3>Consulta Nazionale</h3>
+            <p>I rappresentanti nazionali siedono nella Consulta del SCU, organo consultivo del Dipartimento per le Politiche Giovanili.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LISTA DELEGATI CON ANNO SELECTOR -->
+    <div class="section">
+      <div class="wrap">
+        <div class="section-header">
+          <div>
+            <p class="section-label">Composizione</p>
+            <h2 class="section-title" style="margin-bottom:0">Delegati e rappresentanti per anno.</h2>
+          </div>
+          <div class="year-selector" role="group" aria-label="Seleziona anno di riferimento">
+            <button class="year-btn active" data-year="2026">2026</button>
+            <button class="year-btn" data-year="2025">2025</button>
+            <button class="year-btn" data-year="2024">2024</button>
+          </div>
+        </div>
+
+        <!-- 2026 -->
+        <div class="delegati-data" id="delegati-2026">
+          <div class="delegati-list" role="table" aria-label="Delegati e rappresentanti 2026">
+            <div class="delegati-list-head" role="row">
+              <span>Nome e cognome</span>
+              <span>Ruolo</span>
+              <span>Anno</span>
+            </div>
+
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"><!-- Inserire qui ciò che va nel cerchio --></div>Corrado Capasso</div>
+              <div class="delegato-row-role">Rappresentante Nazionale</div>
+              <div class="delegato-row-badge"><span class="badge badge-blue">2026</span></div>
+            </div>
+
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"><!-- Inserire qui ciò che va nel cerchio --></div>Melania Carotenuto</div>
+              <div class="delegato-row-role">Rappresentante Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-blue">2026</span></div>
+            </div>
+
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"><!-- Inserire qui ciò che va nel cerchio --></div>Sabatino Fasulo</div>
+              <div class="delegato-row-role">Vice-Rappresentante Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-blue">2026</span></div>
+            </div>
+
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Alessia Ala</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
+            </div>
+
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Vincenzo Barbato</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
+            </div>
+
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Leonardo Baroniello</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
+            </div>
+
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Maicol Cardamone</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
+            </div>
+
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Lucia Cianciulli</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
+            </div>
+
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Maria Deriu</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
+            </div>
+
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Noemi Filantropico</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
+            </div>
+
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Gianmarco Luciano</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
+            </div>
+
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Giulio Mangiacapra</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
+            </div>
+
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Michele Mennillo</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
+            </div>
+
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Alessandro Perugino</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
+            </div>
+
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>⁠Francesco Ragozzino</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
+            </div>
+
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>⁠Mara Russo</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 2025 -->
+        <div class="delegati-data" id="delegati-2025" style="display:none">
+          <div class="delegati-list" role="table" aria-label="Delegati e rappresentanti 2025">
+            <div class="delegati-list-head" role="row">
+              <span>Nome e cognome</span>
+              <span>Ruolo</span>
+              <span>Anno</span>
+            </div>
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">D1</div>[Nome Delegato 1 – 2025]</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-gray">2025</span></div>
+            </div>
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">D2</div>[Nome Delegato 2 – 2025]</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-gray">2025</span></div>
+            </div>
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">R1</div>[Nome Rappresentante 1 – 2025]</div>
+              <div class="delegato-row-role">Rappresentante Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-gray">2025</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2024 -->
+        <div class="delegati-data" id="delegati-2024" style="display:none">
+          <div class="delegati-list" role="table" aria-label="Delegati e rappresentanti 2024">
+            <div class="delegati-list-head" role="row">
+              <span>Nome e cognome</span>
+              <span>Ruolo</span>
+              <span>Anno</span>
+            </div>
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">D1</div>[Nome Delegato 1 – 2024]</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-gray">2024</span></div>
+            </div>
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">R1</div>[Nome Rappresentante 1 – 2024]</div>
+              <div class="delegato-row-role">Rappresentante Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-gray">2024</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">Riferimenti normativi</p>
+        <h2 class="section-title">Basi istituzionali della rappresentanza.</h2>
+        <div class="doc-list">
+          <a class="doc-row" href="https://www.politichegiovanili.gov.it/media/khqivwkp/allegatob_linee_guida.pdf" target="_blank" rel="noopener noreferrer">
+            <div class="doc-icon-wrap" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <div class="doc-info"><strong>Linee guida – Rappresentanza SCU</strong><span>PDF ufficiale · Dipartimento Politiche Giovanili</span></div>
+            <svg class="doc-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a class="doc-row" href="https://www.politichegiovanili.gov.it/media/3afkw3g0/nuovo-regolamento-interno.pdf" target="_blank" rel="noopener noreferrer">
+            <div class="doc-icon-wrap" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+            <div class="doc-info"><strong>Regolamento interno della Rappresentanza</strong><span>PDF ufficiale · Organizzazione interna</span></div>
+            <svg class="doc-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a class="doc-row" href="http://www.politichegiovanili.gov.it/servizio-civile/operatori-volontari/elezioni/" target="_blank" rel="noopener noreferrer">
+            <div class="doc-icon-wrap" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+            <div class="doc-info"><strong>Elezioni e procedure</strong><span>Modalità ufficiali di elezione della rappresentanza</span></div>
+            <svg class="doc-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ TAVOLI ══════════════ -->
+  <div class="page" id="page-tavoli" role="region" aria-label="Tavoli di lavoro">
+    <div class="hero" style="padding-bottom:var(--sp-10)">
+      <div class="wrap">
+        <p class="hero-eyebrow">Tavoli di lavoro</p>
+        <h1 class="hero-title" style="font-size:var(--text-xl);max-width:none">9 gruppi tematici per il confronto.</h1>
+        <p class="hero-sub" style="margin-bottom:0">Spazi in cui i delegati e rappresentanza approfondiscono temi specifici, elaborano proposte e costruiscono posizioni condivise da portare nelle sedi istituzionali.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <div class="section-header">
+          <div>
+            <p class="section-label">Tavoli Attivi 2026</p>
+            <h2 class="section-title" style="margin-bottom:0">Nove aree tematiche</h2>
+          </div>
+          <button class="btn btn-ghost" data-page="contatti">Proponi un tema →</button>
+        </div>
+
+        <div class="tavoli-grid">
+          <div class="tavolo">
+            <p class="tavolo-number">Tavolo Rapporti Istituzionali</p>
+            <p> ❋ Gestione e sviluppo dei rapporti con le Istituzioni locali<br>
+                ❋ Coordinamento con i referenti delle altre funzioni per attività condivise<br>
+                ❋ Supporto alle delegazioni nella presentazione di istanze istituzionali<br>
+                ❋ Condivisione di buone pratiche tra Delegati e Delegazioni
+            </p>
+            <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div>
+          </div>
+
+          <div class="tavolo">
+            <p class="tavolo-number">Tavolo Convenzioni</p>
+            <p> ❋ Analisi del quadro generale delle convenzioni esistenti<br>
+                ❋ Promozione del riconoscimento dell'operatore volontario nella società<br>
+                ❋ Sviluppo e proposta di nuove convenzioni con soggetti nazionali e locali<br>
+                ❋ Condivisione di buone pratiche tra delegazioni<br>
+                ❋ Coordinamento delle attività e delle opportunità a livello territoriale
+            </p>
+            <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div>
+          </div>
+
+          <div class="tavolo">
+            <p class="tavolo-number">Tavolo Formazione</p>
+            <p>
+                ❋ Preparazione e condivisione di materiali formativi (presentazioni, vademecum) per Delegati ed Enti<br>
+                ❋ Organizzazione di eventi formativi e informativi sul Servizio Civile Universale<br>
+                ❋ Definizione di strategie nazionali per il miglioramento della formazione sulla rappresentanza<br>
+                ❋ Monitoraggio delle attività formative delle delegazioni regionali, con eventuale partecipazione agli incontri<br>
+                ❋ Monitoraggio dei moduli di formazione, contatto con gli Enti e disponibilità a partecipare agli incontri formativi
+            </p>
+            <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div>
+          </div>
+
+          <div class="tavolo">
+            <p class="tavolo-number">Tavolo Dibattito e Iniziative</p>
+            <p>
+                ❋ Monitoraggio dei temi di attualità rilevanti per il Servizio Civile e la società<br>
+                ❋ Raccolta e analisi delle idee e dei contributi dei Delegati<br>
+                ❋ Alimentare riflessioni e dibattiti interni alla Rappresentanza<br>
+                ❋ Proporre e organizzare iniziative ed eventi per condividere posizioni e sensibilizzare su temi specifici<br>
+                ❋ Supportare le altre funzioni fornendo spunti e dati utili per attività coordinate
+            </p>
+            <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div>
+          </div>
+
+          <div class="tavolo">
+            <p class="tavolo-number">Tavolo Partecipazione</p>
+            <p>
+                ❋ Gestione della campagna elettorale<br>
+                ❋ Promozione della partecipazione degli operatori volontari<br>
+                ❋ Organizzazione delle assemblee regionali di presentazione dei candidati<br>
+                ❋ Promozione del Servizio Civile Regionale nel territorio di competenza
+            </p>
+            <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div>
+          </div>
+
+          <div class="tavolo">
+            <p class="tavolo-number">Tavolo Raccolta e Analisi</p>
+            <p>
+                ❋ Raccolta e analisi di dati elettorali e partecipativi<br>
+                ❋ Raccolta di segnalazioni, dati normativi e statistici<br>
+                ❋ Elaborazione di studi e report per supportare le altre funzioni<br>
+                ❋ Creazione di strumenti informativi per agevolare riflessioni e decisioni della Rappresentanza<br>
+                ❋ Fornire basi fattuali e materiali per proposte e iniziative migliorative
+            </p>
+            <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div>
+          </div>
+
+          <div class="tavolo">
+            <p class="tavolo-number">Tavolo Normativa</p>
+            <p>
+                ❋ Presentazione di proposte di modifica dei Regolamenti e della Normativa nelle sedi opportune a livello nazionale<br>
+                ❋ Raccolta delle proposte di modifica dai Delegati e dagli Operatori Volontari a livello regionale (compito del Rappresentante Regionale)<br>
+                ❋ Analisi e revisione di documenti e testi normativi relativi a giovani, cittadinanza e tematiche affini<br>
+                ❋ Elaborazione di proposte che possano costituire base di interlocuzione con le istituzioni competenti<br>
+            </p>
+            <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div>
+          </div>
+
+          <div class="tavolo">
+            <p class="tavolo-number">Tavolo Comunicazione</p>
+            <p>
+                ❋ Promozione del Servizio Civile sul territorio<br>
+                ❋ Comunicazione delle attività e dei risultati della rappresentanza<br>
+                ❋ Scambio di buone pratiche tra Delegati<br>
+                ❋ Gestione e sviluppo dei canali di comunicazione<br>
+            </p>
+            <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div>
+          </div>
+
+          <div class="tavolo">
+            <p class="tavolo-number">Tavolo Segnalazioni</p>
+            <p>
+                ❋ Supporto alle Delegazioni nella gestione delle segnalazioni che coinvolgono il Dipartimento<br>
+                ❋ Richiesta di eventuali interventi ispettivi nei confronti degli Enti<br>
+                ❋ Proposte di modifica a regolamenti e FAQ, in collaborazione con la funzione Normativa e Regolamenti<br>
+                ❋ Prevenzione di nuove violazioni attraverso il miglioramento degli strumenti normativi
+            </p>
+            <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">Come partecipare</p>
+        <h2 class="section-title">Vuoi portare il tuo contributo?</h2>
+        <p class="section-desc">I tavoli sono aperti a tutti gli operatori volontari in servizio in Campania. Se vuoi partecipare a un tavolo esistente o proporre un nuovo tema, scrivici dalla sezione Contatti.</p>
+        <button class="btn btn-solid" data-page="contatti">Contattaci per partecipare</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ CONTATTI ══════════════ -->
+  <div class="page" id="page-contatti" role="region" aria-label="Contatti">
+    <div class="hero" style="padding-bottom:var(--sp-10)">
+      <div class="wrap">
+        <p class="hero-eyebrow">Contatti</p>
+        <h1 class="hero-title" style="font-size:var(--text-xl);max-width:none">Scrivici: ascoltiamo ogni volontario!</h1>
+        <p class="hero-sub" style="margin-bottom:0">Usa il modulo per inviare segnalazioni, proposte o richieste di informazioni alla Delegazione regionale.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <div class="form-wrap">
+          <form class="form-card" id="contact-form" novalidate>
+            <h2 style="font-size:var(--text-lg);font-weight:700;letter-spacing:-.02em;margin-bottom:.25rem">Invia un messaggio</h2>
+            <p style="font-size:var(--text-sm);color:var(--text-2);margin-bottom:.5rem">Rispondiamo a tutti i volontari. Sii preciso/a nella descrizione per aiutarci a rispondere meglio.</p>
+            <hr>
+            <div class="form-row2">
+              <div class="field">
+                <label for="f-nome">Nome e Cognome</label>
+                <input type="text" id="f-nome" name="nome" placeholder="Mario Rossi" autocomplete="name" required/>
+              </div>
+              <div class="field">
+                <label for="f-email">E-Mail</label>
+                <input type="email" id="f-email" name="email" placeholder="nome@email.it" autocomplete="email" required/>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-tipo">Tipo di messaggio</label>
+              <select id="f-tipo" name="tipo">
+                <option value="">Seleziona una categoria</option>
+                <option>Segnalazione</option>
+                <option>Proposta</option>
+                <option>Richiesta di informazioni</option>
+                <option>Altro</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="f-msg">Messaggio</label>
+              <textarea id="f-msg" name="messaggio" placeholder="Descrivi la tua richiesta o segnalazione…" required></textarea>
+            </div>
+            <button class="btn btn-solid" type="submit" style="width:100%;justify-content:center;height:2.6rem">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9"/></svg>
+              Invia messaggio
+            </button>
+            <div id="form-ok" role="alert">✓ Messaggio inviato. Ti risponderemo il prima possibile.</div>
+          </form>
+
+          <div class="contacts-aside">
+            <div class="contact-item">
+              <h4>Canali diretti</h4>
+              <div class="contact-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>Email: <a href="mailto:[EMAIL]">info@devocomprareildominio.it</a></span>
+              </div>
+              <div class="contact-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                <span>Instagram: <a href="https://instagram.com/delegazionecampaniascu" target="_blank" rel="noopener noreferrer">@delegazionecampaniascu</a></span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <h4>Riferimenti istituzionali</h4>
+              <div class="ref-list">
+                <a class="contact-link" href="http://serviziocivilecampania.it/contatti-2/" target="_blank" rel="noopener noreferrer">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                  Ufficio Regionale Campania
+                </a>
+                <a class="contact-link" href="https://www.regione.campania.it/regione/it/tematiche/servizio-civile-dv3bzpt9" target="_blank" rel="noopener noreferrer">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                  Servizio Civile – Regione Campania
+                </a>
+                <a class="contact-link" href="http://www.politichegiovanili.gov.it/servizio-civile/operatori-volontari/rappresentanza/" target="_blank" rel="noopener noreferrer">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                  Rappresentanza SCU – Dipartimento
+                </a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <h4>Orari di risposta</h4>
+              <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Rispondiamo entro 3–5 giorni lavorativi. Per questioni urgenti usa il canale email diretto o il profilo Instagram.</p>
+            </div>
+            <div class="contact-item">
+            <h4>Problemi con il sito?</h4>
+            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Per problemi o informazioni contattare assistenza@devocomprareildominio.it</p>
+            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Questo sito è stato realizzato con ❤ da Gianmarco Luciano</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 </main>
 
 <footer>
