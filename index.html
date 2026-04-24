@@ -844,8 +844,9 @@
   const mobileNav = document.getElementById('mobile-nav');
   hamburger.addEventListener('click', () => {
     const open = mobileNav.classList.toggle('open');
+    mobileNav.style.display = open ? 'flex' : 'none';
     hamburger.setAttribute('aria-expanded', open);
-  });
+});
 
   /* YEAR SELECTOR */
   document.querySelectorAll('.year-btn').forEach(btn => {
