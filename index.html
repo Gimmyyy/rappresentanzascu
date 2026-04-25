@@ -56,10 +56,9 @@
 
     /* TOPBAR */
     .topbar{background:var(--bg);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
-    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-4);height:3.5rem}
+    .topbar-inner{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-4);height:4.25rem}
     .logo{display:flex;align-items:center;gap:.65rem;font-size:var(--text-sm);font-weight:600;flex-shrink:0}
-    .logo-mark{width:1.85rem;height:1.85rem;border-radius:.5rem;background:var(--accent);display:grid;place-items:center;flex-shrink:0}
-    .logo-mark svg{color:#fff}
+    .logo-mark-img{width:3.5rem;height:3.5rem;flex-shrink:0;display:flex;align-items:center}
     .logo-label{display:flex;flex-direction:column;line-height:1.15}
     .logo-label strong{font-size:var(--text-sm);font-weight:700}
     .logo-label span{font-size:var(--text-xs);color:var(--text-2);font-weight:400}
@@ -155,7 +154,7 @@
 
     /* FORM */
     .form-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:var(--sp-10);align-items:start}
-    .form-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);padding:1.75rem;display:grid;gap:1rem}
+    .form-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);padding:4.25rem;display:grid;gap:1rem}
     .field{display:grid;gap:.45rem}
     .field label{font-size:var(--text-sm);font-weight:600;color:var(--text)}
     .field input,.field textarea,.field select{width:100%;padding:.6rem .85rem;border:1px solid var(--border);border-radius:var(--r-md);background:var(--bg);color:var(--text);font:inherit;font-size:var(--text-sm);transition:border-color var(--t),box-shadow var(--t)}
@@ -212,10 +211,8 @@
 <header class="topbar" role="banner">
   <div class="wrap topbar-inner">
     <button class="logo" data-page="home" aria-label="Home – Rappresentanza SCU Campania">
-      <span class="logo-mark" aria-hidden="true">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-        </svg>
+      <span class="logo-mark-img" aria-hidden="true">
+        <img src="./assets/logo.jpg" alt="Logo SCU Campania" width="56" height="56" style="border-radius:.4rem;object-fit:cover;display:block;">
       </span>
       <span class="logo-label">
         <strong>SCU Campania</strong>
@@ -396,97 +393,97 @@
             </div>
 
             <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"><!-- Inserire qui ciò che va nel cerchio --></div>Corrado Capasso</div>
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">CC</div>Corrado Capasso</div>
               <div class="delegato-row-role">Rappresentante Nazionale</div>
               <div class="delegato-row-badge"><span class="badge badge-blue">2026</span></div>
             </div>
 
             <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"><!-- Inserire qui ciò che va nel cerchio --></div>Melania Carotenuto</div>
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">MC</div>Melania Carotenuto</div>
               <div class="delegato-row-role">Rappresentante Regionale · Campania</div>
               <div class="delegato-row-badge"><span class="badge badge-blue">2026</span></div>
             </div>
 
             <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"><!-- Inserire qui ciò che va nel cerchio --></div>Sabatino Fasulo</div>
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">SF</div>Sabatino Fasulo</div>
               <div class="delegato-row-role">Vice-Rappresentante Regionale · Campania</div>
               <div class="delegato-row-badge"><span class="badge badge-blue">2026</span></div>
             </div>
 
             <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Alessia Ala</div>
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">AA</div>Alessia Ala</div>
               <div class="delegato-row-role">Delegato Regionale · Campania</div>
               <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
             </div>
 
             <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Vincenzo Barbato</div>
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">VB</div>Vincenzo Barbato</div>
               <div class="delegato-row-role">Delegato Regionale · Campania</div>
               <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
             </div>
 
             <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Leonardo Baroniello</div>
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">LB</div>Leonardo Baroniello</div>
               <div class="delegato-row-role">Delegato Regionale · Campania</div>
               <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
             </div>
 
             <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Maicol Cardamone</div>
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">MC</div>Maicol Cardamone</div>
               <div class="delegato-row-role">Delegato Regionale · Campania</div>
               <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
             </div>
 
             <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Lucia Cianciulli</div>
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">LC</div>Lucia Cianciulli</div>
               <div class="delegato-row-role">Delegato Regionale · Campania</div>
               <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
             </div>
 
             <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Maria Deriu</div>
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">MD</div>Maria Deriu</div>
               <div class="delegato-row-role">Delegato Regionale · Campania</div>
               <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
             </div>
 
             <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Noemi Filantropico</div>
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">NF</div>Noemi Filantropico</div>
               <div class="delegato-row-role">Delegato Regionale · Campania</div>
               <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
             </div>
 
             <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Gianmarco Luciano</div>
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">GL</div>Gianmarco Luciano</div>
               <div class="delegato-row-role">Delegato Regionale · Campania</div>
               <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
             </div>
 
             <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Giulio Mangiacapra</div>
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">GM</div>Giulio Mangiacapra</div>
               <div class="delegato-row-role">Delegato Regionale · Campania</div>
               <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
             </div>
 
             <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Michele Mennillo</div>
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">MM</div>Michele Mennillo</div>
               <div class="delegato-row-role">Delegato Regionale · Campania</div>
               <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
             </div>
 
             <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>Alessandro Perugino</div>
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">AP</div>Alessandro Perugino</div>
               <div class="delegato-row-role">Delegato Regionale · Campania</div>
               <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
             </div>
 
             <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>⁠Francesco Ragozzino</div>
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">FR</div>⁠Francesco Ragozzino</div>
               <div class="delegato-row-role">Delegato Regionale · Campania</div>
               <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
             </div>
 
             <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true"></div>⁠Mara Russo</div>
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">MR</div>⁠Mara Russo</div>
               <div class="delegato-row-role">Delegato Regionale · Campania</div>
               <div class="delegato-row-badge"><span class="badge badge-green">2026</span></div>
             </div>
@@ -496,25 +493,30 @@
 
         <!-- 2025 -->
         <div class="delegati-data" id="delegati-2025" style="display:none">
-          <div class="delegati-list" role="table" aria-label="Delegati e rappresentanti 2025">
+          <div class="delegati-list" role="table" aria-label="Delegati e rappresentanti 2024">
             <div class="delegati-list-head" role="row">
               <span>Nome e cognome</span>
               <span>Ruolo</span>
               <span>Anno</span>
             </div>
             <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">D1</div>[Nome Delegato 1 – 2025]</div>
-              <div class="delegato-row-role">Delegato Regionale · Campania</div>
-              <div class="delegato-row-badge"><span class="badge badge-gray">2025</span></div>
-            </div>
-            <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">D2</div>[Nome Delegato 2 – 2025]</div>
-              <div class="delegato-row-role">Delegato Regionale · Campania</div>
-              <div class="delegato-row-badge"><span class="badge badge-gray">2025</span></div>
-            </div>
-            <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">R1</div>[Nome Rappresentante 1 – 2025]</div>
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">N/A</div>NON APPLICABILE</div>
               <div class="delegato-row-role">Rappresentante Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-gray">2025</span></div>
+            </div>
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">N/A</div>NON APPLICABILE</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-gray">2025</span></div>
+            </div>
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">N/A</div>NON APPLICABILE</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-gray">2025</span></div>
+            </div>
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">N/A</div>NON APPLICABILE</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
               <div class="delegato-row-badge"><span class="badge badge-gray">2025</span></div>
             </div>
           </div>
@@ -529,13 +531,18 @@
               <span>Anno</span>
             </div>
             <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">D1</div>[Nome Delegato 1 – 2024]</div>
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">N/A</div>NON APPLICABILE</div>
+              <div class="delegato-row-role">Rappresentante Regionale · Campania</div>
+              <div class="delegato-row-badge"><span class="badge badge-gray">2024</span></div>
+            </div>
+            <div class="delegato-row" role="row">
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">N/A</div>NON APPLICABILE</div>
               <div class="delegato-row-role">Delegato Regionale · Campania</div>
               <div class="delegato-row-badge"><span class="badge badge-gray">2024</span></div>
             </div>
             <div class="delegato-row" role="row">
-              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">R1</div>[Nome Rappresentante 1 – 2024]</div>
-              <div class="delegato-row-role">Rappresentante Regionale · Campania</div>
+              <div class="delegato-row-name"><div class="d-avatar" aria-hidden="true">N/A</div>NON APPLICABILE</div>
+              <div class="delegato-row-role">Delegato Regionale · Campania</div>
               <div class="delegato-row-badge"><span class="badge badge-gray">2024</span></div>
             </div>
           </div>
@@ -574,7 +581,7 @@
     <div class="hero" style="padding-bottom:var(--sp-10)">
       <div class="wrap">
         <p class="hero-eyebrow">Tavoli di lavoro</p>
-        <h1 class="hero-title" style="font-size:var(--text-xl);max-width:none">9 gruppi tematici per il confronto.</h1>
+        <h1 class="hero-title" style="font-size:var(--text-xl);max-width:none">Nove tavoli tematici per il confronto.</h1>
         <p class="hero-sub" style="margin-bottom:0">Spazi in cui i delegati e rappresentanza approfondiscono temi specifici, elaborano proposte e costruiscono posizioni condivise da portare nelle sedi istituzionali.</p>
       </div>
     </div>
@@ -584,7 +591,7 @@
         <div class="section-header">
           <div>
             <p class="section-label">Tavoli Attivi 2026</p>
-            <h2 class="section-title" style="margin-bottom:0">Nove aree tematiche</h2>
+            <h2 class="section-title" style="margin-bottom:0"> I 9 tavoli tematici:</h2>
           </div>
           <button class="btn btn-ghost" data-page="contatti">Proponi un tema →</button>
         </div>
@@ -597,7 +604,8 @@
                 ❋ Supporto alle delegazioni nella presentazione di istanze istituzionali<br>
                 ❋ Condivisione di buone pratiche tra Delegati e Delegazioni
             </p>
-            <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div>
+          <!-- RIMUOVO QUESTA SEZIONE IN QUANTO NON HA SENSO CAMBIARE OGNI ANNO I NOMI PRESENTI NEI DIVERSI TAVOLI -->
+          <!-- <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><br>Sabatino Fasulo (Referente) <br>Vincenzo Barbato <br>Leonardo Baroniello <br>Giulio Mangiacapra <br>Francesco Ragozzino</svg></div> -->
           </div>
 
           <div class="tavolo">
@@ -608,7 +616,7 @@
                 ❋ Condivisione di buone pratiche tra delegazioni<br>
                 ❋ Coordinamento delle attività e delle opportunità a livello territoriale
             </p>
-            <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div>
+            <!-- <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Maicol Cardamone (Referente) <br>Corrado Capasso <br>Noemi Filantropico</div> -->
           </div>
 
           <div class="tavolo">
@@ -620,7 +628,7 @@
                 ❋ Monitoraggio delle attività formative delle delegazioni regionali, con eventuale partecipazione agli incontri<br>
                 ❋ Monitoraggio dei moduli di formazione, contatto con gli Enti e disponibilità a partecipare agli incontri formativi
             </p>
-            <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div>
+            <!-- <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div> -->
           </div>
 
           <div class="tavolo">
@@ -632,7 +640,7 @@
                 ❋ Proporre e organizzare iniziative ed eventi per condividere posizioni e sensibilizzare su temi specifici<br>
                 ❋ Supportare le altre funzioni fornendo spunti e dati utili per attività coordinate
             </p>
-            <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div>
+            <!-- <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div> -->
           </div>
 
           <div class="tavolo">
@@ -643,7 +651,7 @@
                 ❋ Organizzazione delle assemblee regionali di presentazione dei candidati<br>
                 ❋ Promozione del Servizio Civile Regionale nel territorio di competenza
             </p>
-            <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div>
+            <!-- <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div> -->
           </div>
 
           <div class="tavolo">
@@ -655,7 +663,7 @@
                 ❋ Creazione di strumenti informativi per agevolare riflessioni e decisioni della Rappresentanza<br>
                 ❋ Fornire basi fattuali e materiali per proposte e iniziative migliorative
             </p>
-            <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div>
+            <!-- <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div> -->
           </div>
 
           <div class="tavolo">
@@ -666,7 +674,7 @@
                 ❋ Analisi e revisione di documenti e testi normativi relativi a giovani, cittadinanza e tematiche affini<br>
                 ❋ Elaborazione di proposte che possano costituire base di interlocuzione con le istituzioni competenti<br>
             </p>
-            <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div>
+            <!-- <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div> -->
           </div>
 
           <div class="tavolo">
@@ -677,7 +685,7 @@
                 ❋ Scambio di buone pratiche tra Delegati<br>
                 ❋ Gestione e sviluppo dei canali di comunicazione<br>
             </p>
-            <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div>
+            <!-- <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div> -->
           </div>
 
           <div class="tavolo">
@@ -688,7 +696,7 @@
                 ❋ Proposte di modifica a regolamenti e FAQ, in collaborazione con la funzione Normativa e Regolamenti<br>
                 ❋ Prevenzione di nuove violazioni attraverso il miglioramento degli strumenti normativi
             </p>
-            <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div>
+            <!-- <div class="tavolo-members"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>[Aggiorna con partecipanti]</div> -->
           </div>
         </div>
       </div>
@@ -698,7 +706,7 @@
       <div class="wrap">
         <p class="section-label">Come partecipare</p>
         <h2 class="section-title">Vuoi portare il tuo contributo?</h2>
-        <p class="section-desc">I tavoli sono aperti a tutti gli operatori volontari in servizio in Campania. Se vuoi partecipare a un tavolo esistente o proporre un nuovo tema, scrivici dalla sezione Contatti.</p>
+        <p class="section-desc">I tavoli sono aperti esclusivamente ai delegati in servizio in Campania.<br>Se vuoi proporre un nuovo tema, scrivici dalla sezione Contatti.</p>
         <button class="btn btn-solid" data-page="contatti">Contattaci per partecipare</button>
       </div>
     </div>
@@ -718,7 +726,7 @@
       <div class="wrap">
         <div class="form-wrap">
           <form class="form-card" id="contact-form" novalidate>
-            <h2 style="font-size:var(--text-lg);font-weight:700;letter-spacing:-.02em;margin-bottom:.25rem">Invia un messaggio</h2>
+            <h2 style="font-size:var(--text-lg);font-weight:700;letter-spacing:-.02em;margin-bottom:.25rem">Inviaci un messaggio</h2>
             <p style="font-size:var(--text-sm);color:var(--text-2);margin-bottom:.5rem">Rispondiamo a tutti i volontari. Sii preciso/a nella descrizione per aiutarci a rispondere meglio.</p>
             <hr>
             <div class="form-row2">
@@ -765,7 +773,7 @@
               </div>
             </div>
             <div class="contact-item">
-              <h4>Riferimenti istituzionali</h4>
+              <h4>Riferimenti Istituzionali</h4>
               <div class="ref-list">
                 <a class="contact-link" href="http://serviziocivilecampania.it/contatti-2/" target="_blank" rel="noopener noreferrer">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
@@ -788,7 +796,10 @@
             <div class="contact-item">
             <h4>Problemi con il sito?</h4>
             <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Per problemi o informazioni contattare assistenza@devocomprareildominio.it</p>
-            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Questo sito è stato realizzato con ❤ da Gianmarco Luciano</p>
+            </div>
+
+            <div class="contact-item">
+              <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Questo sito è stato realizzato con ❤ da <a href="https://instagram.com/gimmy.03" target="_blank">laky</a></p>
             </div>
           </div>
         </div>
