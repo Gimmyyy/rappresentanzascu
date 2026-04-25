@@ -835,8 +835,9 @@
     allTabs.forEach(t => t.classList.toggle('active', t.dataset.page === name));
     window.scrollTo({ top: 0, behavior: 'instant' });
     mobileNav.classList.remove('open');
+    mobileNav.style.display = 'none';
     hamburger.setAttribute('aria-expanded', 'false');
-  };
+};
   allTabs.forEach(btn => btn.addEventListener('click', () => goTo(btn.dataset.page)));
 
   /* HAMBURGER */
