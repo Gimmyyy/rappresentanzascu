@@ -726,7 +726,12 @@
     <div class="section">
       <div class="wrap">
         <div class="form-wrap">
-          <form class="form-card" id="contact-form" novalidate>
+          <form class="form-card" id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+            <input type="hidden" name="access_key" value="41a3b4bb-686b-4d4f-abea-c4e83b6f5e50">
+            <input type="hidden" name="subject" value="Nuovo messaggio – SCU Campania">
+            <input type="hidden" name="from_name" value="Sito SCU Campania">
+            <input type="hidden" name="replyto" value="email">
+            <input type="checkbox" name="botcheck" style="display:none">
             <h2 style="font-size:var(--text-lg);font-weight:700;letter-spacing:-.02em;margin-bottom:.25rem">Inviaci un messaggio</h2>
             <p style="font-size:var(--text-sm);color:var(--text-2);margin-bottom:.5rem">Rispondiamo a tutti i volontari. Sii preciso/a nella descrizione per aiutarci a rispondere meglio.</p>
             <hr>
@@ -743,16 +748,17 @@
             <div class="field">
               <label for="f-tipo">Tipo di messaggio</label>
               <select id="f-tipo" name="tipo">
-                <option value="">Seleziona una categoria</option>
-                <option>Segnalazione</option>
+                <option value="">Seleziona una categoria...</option>
+                <option>Richiesta di Informazioni</option>
                 <option>Proposta</option>
-                <option>Richiesta di informazioni</option>
+                <option>Segnalazione</option>
                 <option>Altro</option>
               </select>
             </div>
             <div class="field">
               <label for="f-msg">Messaggio</label>
               <textarea id="f-msg" name="messaggio" placeholder="Descrivi la tua richiesta o segnalazione…" required></textarea>
+              <small id="char-count" style="color:var(--text-3);font-size:var(--text-xs);text-align:right">0 / 2500</small>
             </div>
             <button class="btn btn-solid" type="submit" style="width:100%;justify-content:center;height:2.6rem">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9"/></svg>
@@ -876,12 +882,78 @@
   /* FORM */
   const form = document.getElementById('contact-form');
   const ok = document.getElementById('form-ok');
-  form.addEventListener('submit', e => {
+  const submitBtn = form.querySelector('button[type="submit"]');
+
+  const nome  = document.getElementById('f-nome');
+  const email = document.getElementById('f-email');
+  const tipo  = document.getElementById('f-tipo');
+  const msg   = document.getElementById('f-msg');
+
+  // Rimuovi errore mentre l'utente corregge
+  [nome, email, tipo, msg].forEach(el => {
+    el.addEventListener('input', () => {
+      el.style.borderColor = '';
+      el.style.boxShadow = '';
+    });
+  });
+
+  // Contatore caratteri
+  msg.addEventListener('input', () => {
+  const count = document.getElementById('char-count');
+  const len = msg.value.length;
+  count.textContent = `${len} / 2500`;
+  if (len >= 2000) {
+    count.style.color = len >= 2500 ? '#c0152a' : '#d97706';
+  } else {
+    count.style.color = 'var(--text-3)';
+  }
+});
+
+  function segnaErrore(el) {
+    el.style.borderColor = '#c0152a';
+    el.style.boxShadow = '0 0 0 3px rgba(192,21,42,0.15)';
+  }
+
+  form.addEventListener('submit', async function(e) {
     e.preventDefault();
+
+  [nome, email, tipo, msg].forEach(el => {
+    el.style.borderColor = '';
+    el.style.boxShadow = '';
+  });
+
+  let valido = true;
+  if (!nome.value.trim())  { segnaErrore(nome);  valido = false; }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) { segnaErrore(email); valido = false; }
+  if (!tipo.value)         { segnaErrore(tipo);  valido = false; }
+  if (!msg.value.trim())   { segnaErrore(msg);   valido = false; }
+  if (msg.value.length > 2500) { segnaErrore(msg); valido = false; }
+
+
+  if (!valido) return;
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Invio in corso…';
+
+  const data = new FormData(form);
+  const res = await fetch('https://api.web3forms.com/submit', {
+    method: 'POST',
+    body: data
+  });
+  const json = await res.json();
+
+  submitBtn.disabled = false;
+  submitBtn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9"/></svg> Invia messaggio';
+
+  if (json.success) {
     ok.style.display = 'block';
     form.reset();
+    document.getElementById('char-count').textContent = '0 / 2500';
     setTimeout(() => { ok.style.display = 'none'; }, 6000);
-  });
+  } else {
+    alert('Errore nell\'invio. Riprova.');
+  }
+});
 })();
 </script>
 </body>
