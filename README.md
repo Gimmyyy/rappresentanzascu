@@ -45,7 +45,7 @@ Spazio digitale dedicato agli operatori volontari del SCU in Campania: tavoli di
 
 ---
 
-## 🔄 Aggiornamento annuale
+## 🔄 Aggiornamento Annuale
 
 Per aggiornare i delegati ogni anno è sufficiente modificare **solo** il file `delegati.json`:
 
@@ -56,9 +56,7 @@ Per aggiornare i delegati ogni anno è sufficiente modificare **solo** il file `
       "nome": "Nome Cognome",
       "ruolo": "Delegato Regionale",
       "badge": "green",
-      "foto": null,
       "email": null,
-      "tavoli": ["Comunicazione", "Formazione"]
     }
   ]
 }
@@ -77,7 +75,8 @@ I valori possibili per `badge` sono:
 - 📱 **Responsive** — ottimizzato per mobile, tablet e desktop
 - ♿ **Accessibile** — skip link, `aria-label`, `role` semantici, `:focus-visible`
 - 🔗 **Open Graph** — anteprima ottimizzata per WhatsApp e social
-- 📋 **Form contatti** integrato
+- 📋 **Form Contatti** integrato
+- ⏰ **Anno Footer** — aggiorna automaticamente l'anno corrente nel footer
 
 ---
 
