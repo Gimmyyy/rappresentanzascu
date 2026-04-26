@@ -142,6 +142,9 @@
     .d-avatar{width:2rem;height:2rem;border-radius:50%;background:var(--bg-off);border:1px solid var(--border);display:grid;place-items:center;font-size:.7rem;font-weight:700;color:var(--text-2);flex-shrink:0}
     .delegato-row-role{font-size:var(--text-sm);color:var(--text-2)}
     .delegato-row-badge{justify-self:start}
+    .delegato-email-expand { display:none;font-size:var(--text-xs);color:var(--accent);margin-top:.15rem }
+    .delegato-row.expanded .delegato-email-expand { display:block }
+    .delegato-row.expanded { background:var(--accent-bg) }
 
     /* DOCS */
     .doc-list{display:grid;gap:1px;background:var(--border);border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden}
@@ -248,7 +251,7 @@
   </div>
 </header>
 
-<!--  OTTIMIZZATO PER MOBILE   -->
+<!--  MENU E BOTTONI PER MOBILE   -->
 <nav class="mobile-nav" id="mobile-nav" aria-label="Menu mobile" style="display:none">
   <button class="mobile-nav-tab active" data-page="home">Home</button>
   <button class="mobile-nav-tab" data-page="rappresentanza">Rappresentanza</button>
@@ -668,7 +671,7 @@
 
 <footer>
   <div class="wrap footer-inner">
-    <span>© 2026 Rappresentanza SCU · Regione Campania</span>
+    <span>© <span id="footer-year"></span> Rappresentanza SCU Campania</span>
     <div class="footer-links">
       <a href="https://www.regione.campania.it/regione/it/tematiche/servizio-civile-dv3bzpt9" target="_blank" rel="noopener noreferrer">Regione Campania</a>
       <a href="http://www.politichegiovanili.gov.it/servizio-civile/" target="_blank" rel="noopener noreferrer">Dipartimento SCU</a>
@@ -744,6 +747,9 @@
       delegati.forEach(d => {
         const iniziali = d.nome.split(' ').map(n => n[0]).join('').slice(0, 2).toUpperCase();
         const badgeClass = `badge-${d.badge || 'gray'}`;
+        const emailHtml = d.email
+          ? `<span class="delegato-email-expand">${d.email}</span>`
+          : '';
 
         const row = document.createElement('div');
         row.className = 'delegato-row';
@@ -751,12 +757,24 @@
         row.innerHTML = `
           <div class="delegato-row-name">
             <div class="d-avatar" aria-hidden="true">${iniziali}</div>
-            ${d.nome}
+            <div>
+              <span>${d.nome}</span>
+              ${emailHtml}
+            </div>
           </div>
           <div class="delegato-row-role">${d.ruolo}</div>
           <div class="delegato-row-badge">
             <span class="badge ${badgeClass}">${anno}</span>
           </div>`;
+
+        if (d.email) {
+        row.style.cursor = 'pointer';
+        row.addEventListener('click', (e) => {
+          if (e.target.classList.contains('delegato-email-expand')) return;
+          row.classList.toggle('expanded');
+        });
+      }
+
         lista.appendChild(row);
       });
 
@@ -775,7 +793,8 @@
         });
       });
     });
-  });
+  })
+  .catch(err => console.error('Errore caricamento delegati.json:', err));
 
   /* FORM */
   const form = document.getElementById('contact-form');
@@ -852,6 +871,9 @@
     alert('Errore nell\'invio. Riprova.');
   }
 });
+
+  /* AGGIORNA AUTOMATICAMENTE L'ANNO FOOTER */
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
 })();
 </script>
 </body>

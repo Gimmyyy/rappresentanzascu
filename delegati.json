@@ -4,200 +4,123 @@
       "nome": "Corrado Capasso",
       "ruolo": "Rappresentante Nazionale",
       "badge": "blue",
-      "foto": null,
-      "email": null,
-      "tavoli": [
-        "Partecipazione",
-        "Convenzioni",
-        "Formazione"
-      ]
+      "email": "capa.corrado@gmail.com"
     },
     {
       "nome": "Melania Carotenuto",
       "ruolo": "Rappresentante Regionale",
       "badge": "blue",
-      "foto": null,
-      "email": null,
-      "tavoli": [
-        "Normativa (Referente Regionale)",
-        "Partecipazione"
-      ]
+      "email": "carotenutomelania95@gmail.com"
     },
     {
       "nome": "Sabatino Fasulo",
       "ruolo": "Vice Rappresentante Regionale",
       "badge": "blue",
-      "foto": null,
-      "email": null,
-      "tavoli": [
-        "Rapporti Istituzionali (Referente)",
-        "Normativa",
-        "Partecipazione",
-        "Formazione"
-      ]
+      "email": "fasulotino25@gmail.com"
     },
     {
       "nome": "Alessia Ala",
       "ruolo": "Delegata Regionale",
       "badge": "green",
-      "foto": null,
-      "email": null,
-      "tavoli": [
-        "Comunicazione (Referente Regionale)"
-      ]
+      "email": "alessiaala60@gmail.com"
     },
     {
       "nome": "Vincenzo Barbato",
       "ruolo": "Delegato Regionale",
       "badge": "green",
-      "foto": null,
-      "email": null,
-      "tavoli": [
-        "Rapporti Istituzionali",
-        "Partecipazione (Referente Regionale)"
-      ]
+      "email": "vinbarbato01@gmail.com"
     },
     {
       "nome": "Leonardo Baroniello",
       "ruolo": "Delegato Regionale",
       "badge": "green",
-      "foto": null,
-      "email": null,
-      "tavoli": [
-        "Rapporti Istituzionali",
-        "Segnalazioni (Referente Regionale)"
-      ]
+      "email": "leonardo.baroniello@icloud.com"
     },
     {
       "nome": "Maicol Cardamone",
       "ruolo": "Delegato Regionale",
       "badge": "green",
-      "foto": null,
-      "email": null,
-      "tavoli": [
-        "Convenzioni (Referente Regionale)",
-        "Dibattito e Iniziative (Referente Regionale)"
-      ]
+      "email": "maicol.carda987@gmail.com"
     },
     {
       "nome": "Lucia Cianciulli",
       "ruolo": "Delegata Regionale",
       "badge": "green",
-      "foto": null,
-      "email": null,
-      "tavoli": [
-        "Formazione",
-        "Raccolta e Analisi"
-      ]
+      "email": "lucia.cianc@gmail.com"
     },
     {
       "nome": "Maria Deriu",
       "ruolo": "Delegata Regionale",
       "badge": "green",
-      "foto": null,
-      "email": null,
-      "tavoli": [
-        "Comunicazione",
-        "Segnalazioni"
-      ]
+      "email": "dremra96@gmail.com"
     },
     {
       "nome": "Noemi Filantropico",
       "ruolo": "Delegata Regionale",
       "badge": "green",
-      "foto": null,
-      "email": null,
-      "tavoli": [
-        "Convenzioni",
-        "Raccolta e Analisi (Referente Regionale)"
-      ]
+      "email": "filantropiconoemi@gmail.com"
     },
     {
       "nome": "Gianmarco Luciano",
       "ruolo": "Delegato Regionale",
       "badge": "green",
-      "foto": null,
-      "email": null,
-      "tavoli": [
-        "Raccolta e Analisi",
-        "Segnalazioni"
-      ]
+      "email": "gimmylu2003@gmail.com"
     },
     {
       "nome": "Giulio Mangiacapra",
       "ruolo": "Delegato Regionale",
       "badge": "green",
-      "foto": null,
-      "email": null,
-      "tavoli": [
-        "Comunicazione",
-        "Rapporti Istituzionali",
-        "Normativa",
-        "Formazione",
-        "Dibattito e Iniziative"
-      ]
+      "email": "mangiacapragiuliolavoro@gmail.com"
     },
     {
       "nome": "Michele Mennillo",
       "ruolo": "Delegato Regionale",
       "badge": "green",
-      "foto": null,
-      "email": null,
-      "tavoli": [
-        "Formazione (Referente Regionale)"
-      ]
+      "email": "mennillomichele04@gmail.com"
     },
     {
       "nome": "Alessandro Perugino",
       "ruolo": "Delegato Regionale",
       "badge": "green",
-      "foto": null,
-      "email": null,
-      "tavoli": [
-        "Comunicazione",
-        "Segnalazioni"
-      ]
+      "email": "alexperugino@gmail.com"
     },
     {
       "nome": "Francesco Ragozzino",
       "ruolo": "Delegato Regionale",
       "badge": "green",
-      "foto": null,
-      "email": null,
-      "tavoli": [
-        "Comunicazione",
-        "Rapporti Istituzionali"
-      ]
+      "email": "francescoragozzino99@gmail.com"
     },
     {
       "nome": "Mara Russo",
       "ruolo": "Delegata Regionale",
       "badge": "green",
-      "foto": null,
-      "email": null,
-      "tavoli": [
-        "Segnalazioni"
-      ]
+      "email": "mararussocat@gmail.com"
     }
   ],
+
+
   "2025": [
     {
       "nome": "NON APPLICABILE",
       "ruolo": "Rappresentante Regionale Campania",
       "badge": "gray",
-      "foto": null,
-      "email": null,
-      "tavoli": []
+      "email": null
+    },
+    {
+      "nome": "NON APPLICABILE",
+      "ruolo": "Delegato Regionale",
+      "badge": "gray",
+      "email": null
     }
   ],
+
+
   "2024": [
     {
       "nome": "NON APPLICABILE",
       "ruolo": "Rappresentante Regionale Campania",
       "badge": "gray",
-      "foto": null,
-      "email": null,
-      "tavoli": []
+      "email": null
     }
   ]
 }
