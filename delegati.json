@@ -1,0 +1,203 @@
+{
+  "2026": [
+    {
+      "nome": "Corrado Capasso",
+      "ruolo": "Rappresentante Nazionale",
+      "badge": "blue",
+      "foto": null,
+      "email": null,
+      "tavoli": [
+        "Partecipazione",
+        "Convenzioni",
+        "Formazione"
+      ]
+    },
+    {
+      "nome": "Melania Carotenuto",
+      "ruolo": "Rappresentante Regionale",
+      "badge": "blue",
+      "foto": null,
+      "email": null,
+      "tavoli": [
+        "Normativa (Referente Regionale)",
+        "Partecipazione"
+      ]
+    },
+    {
+      "nome": "Sabatino Fasulo",
+      "ruolo": "Vice Rappresentante Regionale",
+      "badge": "blue",
+      "foto": null,
+      "email": null,
+      "tavoli": [
+        "Rapporti Istituzionali (Referente)",
+        "Normativa",
+        "Partecipazione",
+        "Formazione"
+      ]
+    },
+    {
+      "nome": "Alessia Ala",
+      "ruolo": "Delegata Regionale",
+      "badge": "green",
+      "foto": null,
+      "email": null,
+      "tavoli": [
+        "Comunicazione (Referente Regionale)"
+      ]
+    },
+    {
+      "nome": "Vincenzo Barbato",
+      "ruolo": "Delegato Regionale",
+      "badge": "green",
+      "foto": null,
+      "email": null,
+      "tavoli": [
+        "Rapporti Istituzionali",
+        "Partecipazione (Referente Regionale)"
+      ]
+    },
+    {
+      "nome": "Leonardo Baroniello",
+      "ruolo": "Delegato Regionale",
+      "badge": "green",
+      "foto": null,
+      "email": null,
+      "tavoli": [
+        "Rapporti Istituzionali",
+        "Segnalazioni (Referente Regionale)"
+      ]
+    },
+    {
+      "nome": "Maicol Cardamone",
+      "ruolo": "Delegato Regionale",
+      "badge": "green",
+      "foto": null,
+      "email": null,
+      "tavoli": [
+        "Convenzioni (Referente Regionale)",
+        "Dibattito e Iniziative (Referente Regionale)"
+      ]
+    },
+    {
+      "nome": "Lucia Cianciulli",
+      "ruolo": "Delegata Regionale",
+      "badge": "green",
+      "foto": null,
+      "email": null,
+      "tavoli": [
+        "Formazione",
+        "Raccolta e Analisi"
+      ]
+    },
+    {
+      "nome": "Maria Deriu",
+      "ruolo": "Delegata Regionale",
+      "badge": "green",
+      "foto": null,
+      "email": null,
+      "tavoli": [
+        "Comunicazione",
+        "Segnalazioni"
+      ]
+    },
+    {
+      "nome": "Noemi Filantropico",
+      "ruolo": "Delegata Regionale",
+      "badge": "green",
+      "foto": null,
+      "email": null,
+      "tavoli": [
+        "Convenzioni",
+        "Raccolta e Analisi (Referente Regionale)"
+      ]
+    },
+    {
+      "nome": "Gianmarco Luciano",
+      "ruolo": "Delegato Regionale",
+      "badge": "green",
+      "foto": null,
+      "email": null,
+      "tavoli": [
+        "Raccolta e Analisi",
+        "Segnalazioni"
+      ]
+    },
+    {
+      "nome": "Giulio Mangiacapra",
+      "ruolo": "Delegato Regionale",
+      "badge": "green",
+      "foto": null,
+      "email": null,
+      "tavoli": [
+        "Comunicazione",
+        "Rapporti Istituzionali",
+        "Normativa",
+        "Formazione",
+        "Dibattito e Iniziative"
+      ]
+    },
+    {
+      "nome": "Michele Mennillo",
+      "ruolo": "Delegato Regionale",
+      "badge": "green",
+      "foto": null,
+      "email": null,
+      "tavoli": [
+        "Formazione (Referente Regionale)"
+      ]
+    },
+    {
+      "nome": "Alessandro Perugino",
+      "ruolo": "Delegato Regionale",
+      "badge": "green",
+      "foto": null,
+      "email": null,
+      "tavoli": [
+        "Comunicazione",
+        "Segnalazioni"
+      ]
+    },
+    {
+      "nome": "Francesco Ragozzino",
+      "ruolo": "Delegato Regionale",
+      "badge": "green",
+      "foto": null,
+      "email": null,
+      "tavoli": [
+        "Comunicazione",
+        "Rapporti Istituzionali"
+      ]
+    },
+    {
+      "nome": "Mara Russo",
+      "ruolo": "Delegata Regionale",
+      "badge": "green",
+      "foto": null,
+      "email": null,
+      "tavoli": [
+        "Segnalazioni"
+      ]
+    }
+  ],
+  "2025": [
+    {
+      "nome": "NON APPLICABILE",
+      "ruolo": "Rappresentante Regionale Campania",
+      "badge": "gray",
+      "foto": null,
+      "email": null,
+      "tavoli": []
+    }
+  ],
+  "2024": [
+    {
+      "nome": "NON APPLICABILE",
+      "ruolo": "Rappresentante Regionale Campania",
+      "badge": "gray",
+      "foto": null,
+      "email": null,
+      "tavoli": []
+    }
+  ]
+}
