@@ -166,7 +166,7 @@
     .tavolo p{font-size:var(--text-sm);color:var(--text-2);line-height:1.65;flex:0}
     .tavolo-members{display:flex;align-items:center;gap:.4rem;font-size:var(--text-xs);color:var(--text-3);margin-top:.5rem}
 
-    /* FORM */
+    /* FORM E CONTATTI */
     .form-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:var(--sp-10);align-items:start}
     .form-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-lg);padding:4.5rem;display:grid;gap:1rem}
     .field{display:grid;gap:.45rem}
@@ -186,6 +186,28 @@
     .contact-link a{color:var(--accent);font-weight:600}
     .ref-list{display:grid;gap:.5rem}
     hr{border:0;border-top:1px solid var(--border);margin:var(--sp-4) 0}
+
+    /* INFORMATIVA PRIVACY - CHECKBOX */
+    .field-privacy {display: flex;align-items: flex-start;gap: .6rem;padding: .75rem 0;cursor: pointer;}
+    .field-privacy input[type="checkbox"] {width: 1rem;height: 1rem;min-width: 1rem;margin-top: .15rem;accent-color: var(--accent);cursor: pointer;}
+    .field-privacy span { font-size: var(--text-xs);color: var(--text-2);line-height: 1.6;}
+    .field-privacy a { color: var(--accent); font-weight: 600; }
+    .field-privacy.error span { color: #c0152a; }
+
+    /* FAQ */
+    .faq-list { border:1px solid var(--border);border-radius:var(--r-lg);overflow:hidden }
+    .faq-item { border-top:1px solid var(--border) }
+    .faq-item:first-child { border-top:0 }
+    .faq-q { width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 1.25rem;background:var(--bg);font-size:var(--text-sm);font-weight:600;color:var(--text);text-align:left;cursor:pointer;border:0;transition:background var(--t) }
+    .faq-q:hover { background:var(--bg-sub) }
+    .faq-q[aria-expanded="true"] { background:var(--bg-sub) }
+    .faq-icon { flex-shrink:0;color:var(--text-2);transition:transform var(--t) }
+    .faq-q[aria-expanded="true"] .faq-icon { transform:rotate(180deg) }
+    .faq-a { display:none;padding:.75rem 1.25rem 1.1rem;font-size:var(--text-sm);color:var(--text-2);line-height:1.7 }
+    .faq-a p { margin:0 }
+    .faq-item.open .faq-a { display:block }
+    .faq-cta { margin-top:var(--sp-8);padding:var(--sp-6) 1.5rem;background:var(--bg-off);border:1px solid var(--border);border-radius:var(--r-lg);display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap }
+    .faq-cta p { font-size:var(--text-sm);font-weight:600;color:var(--text);margin:0 }
 
     /* FOOTER */
     footer{border-top:1px solid var(--border);padding:var(--sp-8) 0;background:var(--bg-sub)}
@@ -238,6 +260,7 @@
       <button class="nav-tab" data-page="rappresentanza">Rappresentanza</button>
       <button class="nav-tab" data-page="tavoli">Tavoli</button>
       <button class="nav-tab" data-page="contatti">Contatti</button>
+      <button class="nav-tab" data-page="faq">FAQ</button>  
     </nav>
     <div class="nav-actions">
       <button class="icon-btn" id="theme-toggle" aria-label="Cambia tema">
@@ -257,6 +280,7 @@
   <button class="mobile-nav-tab" data-page="rappresentanza">Rappresentanza</button>
   <button class="mobile-nav-tab" data-page="tavoli">Tavoli</button>
   <button class="mobile-nav-tab" data-page="contatti">Contatti</button>
+  <button class="mobile-nav-tab" data-page="faq">FAQ</button>
 </nav>
 
 <main id="main">
@@ -608,6 +632,12 @@
               <textarea id="f-msg" name="messaggio" placeholder="Descrivi la tua richiesta o segnalazione…" required></textarea>
               <small id="char-count" style="color:var(--text-3);font-size:var(--text-xs);text-align:right">0 / 2500</small>
             </div>
+            <div class="field">
+              <label class="field-privacy" for="privacy-check">
+                <input type="checkbox" id="privacy-check" name="privacy" value="Consenso al trattamento dei dati personali prestato" required>
+                <span>Ho letto l'<a href="#" data-page="privacy" onclick="showPage('privacy'); return false;">informativa privacy</a> e acconsento al trattamento dei miei dati personali per essere ricontattato in merito alla mia richiesta.</span>
+              </label>
+            </div>
             <button class="btn btn-solid" type="submit" style="width:100%;justify-content:center;height:2.6rem">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9"/></svg>
               Invia messaggio
@@ -667,13 +697,207 @@
     </div>
   </div>
 
+  <!-- ══════════════ FAQ ══════════════ -->
+  <div class="page" id="page-faq" role="region" aria-label="FAQ">
+    <div class="hero" style="padding-bottom:var(--sp-10)">
+      <div class="wrap">
+        <p class="hero-eyebrow">Domande frequenti</p>
+        <h1 class="hero-title" style="font-size:var(--text-xl);max-width:none">Hai una domanda? Abbiamo la risposta.</h1>
+        <p class="hero-sub" style="margin-bottom:0">Risposte alle domande più comuni sulla rappresentanza, i tavoli, i contatti e il funzionamento del SCU in Campania.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">Generale</p>
+        <h2 class="section-title">La Rappresentanza</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Cos'è la Rappresentanza SCU in Campania?</span>
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><p>È lo strumento istituzionale che permette agli operatori volontari del SCU di dialogare con la Regione Campania e il Dipartimento per le Politiche Giovanili. È articolata in delegati regionali e rappresentanti regionali, con raccordo nazionale tramite la Consulta SCU.</p></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Chi sono i delegati regionali?</span>
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><p>Operatori volontari eletti dai loro pari durante il periodo di servizio. Favoriscono il raccordo con la Regione Campania e partecipano alle assemblee degli operatori sul territorio.</p></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Chi sono i rappresentanti regionali?</span>
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><p>Eletti dai delegati, partecipano alle assemblee nazionali e portano la voce della Campania nelle sedi istituzionali, inclusa la Consulta Nazionale del SCU.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">Tavoli di lavoro</p>
+        <h2 class="section-title">Partecipazione</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Posso partecipare ai tavoli di lavoro?</span>
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><p>I tavoli sono aperti esclusivamente ai delegati in servizio in Campania. Per partecipare scrivi dalla sezione Contatti indicando il tuo interesse.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Quanti tavoli ci sono e di cosa si occupano?</span>
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><p>Ci sono 9 tavoli tematici attivi: Rapporti Istituzionali, Convenzioni, Formazione, Dibattito e Iniziative, Partecipazione, Raccolta e Analisi, Normativa, Comunicazione e Segnalazioni. Trovi la descrizione completa nella sezione Tavoli.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Posso proporre un nuovo tema?</span>
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><p>Sì. Scrivi dalla sezione Contatti con la tua proposta. Le idee vengono valutate dalla rappresentanza e portate nelle sedi opportune.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="wrap">
+        <p class="section-label">Contatti e segnalazioni</p>
+        <h2 class="section-title">Come scriverci</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Come posso contattare la delegazione?</span>
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><p>Usa il modulo nella sezione Contatti, scrivi all'email della delegazione oppure segui i canali social per aggiornamenti rapidi.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>In quanto tempo rispondete?</span>
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><p>Entro 3–5 giorni lavorativi. Per urgenze usa il canale email diretto indicato nella sezione Contatti.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Come segnalo un problema con il mio ente?</span>
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><p>Invia una segnalazione tramite il form Contatti specificando la natura del problema. Il Tavolo Segnalazioni gestisce il supporto alle delegazioni per le criticità con gli enti.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Dove trovo i documenti ufficiali?</span>
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><p>Nella sezione Rappresentanza trovi linee guida, regolamento interno e procedure di elezione, con link diretti al Dipartimento per le Politiche Giovanili.</p></div>
+          </div>
+        </div>
+
+        <div class="faq-cta">
+          <p>Non hai trovato la risposta che cercavi?</p>
+          <button class="btn btn-solid" data-page="contatti">Scrivici nella sezione Contatti</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- ══════════════ PRIVACY & NOTE LEGALI ══════════════ -->
+<!-- PRIVACY & NOTE LEGALI -->
+<div class="page" id="page-privacy" role="region" aria-label="Privacy e Note Legali">
+  <div class="hero" style="padding-bottom:var(--sp-10)">
+    <div class="wrap">
+      <p class="hero-eyebrow">Trasparenza</p>
+      <h1 class="hero-title" style="font-size:var(--text-xl);max-width:none">Privacy Policy e Note Legali</h1>
+      <p class="hero-sub" style="margin-bottom:0">Informazioni sul trattamento dei dati personali e condizioni d'uso del sito.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+      <p class="section-label">Informativa Privacy</p>
+      <h2 class="section-title">Trattamento dei dati personali</h2>
+      <p class="section-desc">Ai sensi dell'art. 13 del Regolamento UE 2016/679 (GDPR), forniamo le seguenti informazioni.</p>
+      <div class="doc-list">
+        <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
+          <strong style="font-size:var(--text-sm)">Titolare del trattamento</strong>
+          <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Delegazione Campania della Rappresentanza degli Operatori Volontari del Servizio Civile Universale, raggiungibile all'indirizzo email: <a href="mailto:info@devocomprareildominio.it" style="color:var(--accent)">info@devocomprareildominio.it</a></p>
+        </div>
+        <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
+          <strong style="font-size:var(--text-sm)">Dati raccolti</strong>
+          <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Il sito gimmyyy.github.io/rappresentanzascu raccoglie esclusivamente nome, cognome e indirizzo e-mail, forniti volontariamente dall'utente tramite il modulo di contatto.</p>
+        </div>
+        <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
+          <strong style="font-size:var(--text-sm)">Finalità e base giuridica</strong>
+          <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">I dati sono trattati esclusivamente per rispondere alle richieste ricevute tramite il modulo di contatto. Base giuridica: consenso dell'interessato (art. 6, par. 1, lett. a, GDPR).</p>
+        </div>
+        <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
+          <strong style="font-size:var(--text-sm)">Conservazione</strong>
+          <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">I dati sono conservati per il tempo strettamente necessario a gestire la richiesta e comunque non oltre 12 mesi dalla ricezione.</p>
+        </div>
+        <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
+          <strong style="font-size:var(--text-sm)">Comunicazione a terzi</strong>
+          <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">I dati non sono ceduti, venduti né comunicati a soggetti terzi, salvo obblighi di legge. Il servizio di invio del modulo è gestito tramite Web3Forms, il cui trattamento è disciplinato dalla propria informativa privacy.</p>
+        </div>
+        <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
+          <strong style="font-size:var(--text-sm)">Diritti dell'interessato</strong>
+          <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">In qualsiasi momento puoi esercitare i diritti previsti dagli artt. 15–22 GDPR (accesso, rettifica, cancellazione, limitazione, opposizione, portabilità, revoca del consenso) scrivendo a: <a href="mailto:info@devocomprareildominio.it" style="color:var(--accent)">info@devocomprareildominio.it</a></p>
+        </div>
+        <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
+          <strong style="font-size:var(--text-sm)">Reclami</strong>
+          <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Hai il diritto di proporre reclamo al Garante per la protezione dei dati personali (<a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer" style="color:var(--accent)">www.garanteprivacy.it</a>).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+      <p class="section-label">Note Legali</p>
+      <h2 class="section-title">Condizioni d'uso</h2>
+      <div class="doc-list">
+        <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
+          <strong style="font-size:var(--text-sm)">Proprietà e gestione</strong>
+          <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Questo sito è gestito dalla Delegazione Campania della Rappresentanza degli Operatori Volontari del Servizio Civile Universale. Il sito non ha finalità commerciali ed è realizzato nell'interesse esclusivo degli operatori volontari del SCU in Campania.</p>
+        </div>
+        <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
+          <strong style="font-size:var(--text-sm)">Copyright</strong>
+          <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">© 2026 Delegazione Campania SCU. Tutti i diritti sui contenuti originali del sito (testi, grafica, struttura) sono riservati. È vietata la riproduzione totale o parziale senza autorizzazione scritta.</p>
+        </div>
+        <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
+          <strong style="font-size:var(--text-sm)">Link esterni</strong>
+          <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Il sito può contenere link a risorse esterne (Regione Campania, Dipartimento per le Politiche Giovanili, ecc.). La Delegazione Campania SCU non è responsabile dei contenuti di siti terzi.</p>
+        </div>
+        <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
+          <strong style="font-size:var(--text-sm)">Limitazione di responsabilità</strong>
+          <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Le informazioni presenti nel sito hanno carattere informativo e istituzionale. Per atti ufficiali fare sempre riferimento alle fonti istituzionali del Dipartimento per le Politiche Giovanili e della Regione Campania.</p>
+        </div>
+        <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
+          <strong style="font-size:var(--text-sm)">Aggiornamenti</strong>
+          <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Questi documenti possono essere aggiornati in qualsiasi momento. Ultimo aggiornamento: <strong>aprile 2026</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 </main>
 
 <footer>
   <div class="wrap footer-inner">
     <span>© <span id="footer-year"></span> Rappresentanza SCU Campania</span>
     <div class="footer-links">
-      <a href="https://www.regione.campania.it/regione/it/tematiche/servizio-civile-dv3bzpt9" target="_blank" rel="noopener noreferrer">Regione Campania</a>
+      <a href="#" data-page="privacy" onclick="showPage('privacy'); return false;">Informativa Privacy & Note Legali</a>
       <a href="http://www.politichegiovanili.gov.it/servizio-civile/" target="_blank" rel="noopener noreferrer">Dipartimento SCU</a>
       <a href="http://serviziocivilecampania.it" target="_blank" rel="noopener noreferrer">SC Campania</a>
     </div>
@@ -846,6 +1070,14 @@
   if (!msg.value.trim())   { segnaErrore(msg);   valido = false; }
   if (msg.value.length > 2500) { segnaErrore(msg); valido = false; }
 
+  const privacyCheck = document.getElementById('privacy-check');
+  if (!privacyCheck.checked) {
+    privacyCheck.closest('.field-privacy').classList.add('error');
+    privacyCheck.addEventListener('change', () => {
+      privacyCheck.closest('.field-privacy').classList.remove('error');
+    }, { once: true });
+    valido = false;
+  }
 
   if (!valido) return;
 
@@ -871,6 +1103,22 @@
     alert('Errore nell\'invio. Riprova.');
   }
 });
+
+  // FAQ ACCORDION
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });  
 
   /* AGGIORNA AUTOMATICAMENTE L'ANNO FOOTER */
   document.getElementById('footer-year').textContent = new Date().getFullYear();
