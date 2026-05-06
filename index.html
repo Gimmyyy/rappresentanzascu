@@ -5,7 +5,7 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rappresentanza SCU – Campania</title>
-  <meta name="description" content="Sito della Rappresentanza del Servizio Civile Universale in Regione Campania. Tavoli di lavoro, documenti e contatti."/>
+  <meta name="description" content="Sito della Delegazione del Servizio Civile Universale in Campania"/>
   <meta name="keywords" content="rappresentanza scu, scu campania, servizio civile universale, scu, sito scu campania"/>
   <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.bunny.net">
@@ -37,6 +37,9 @@
       --text:#09090b; --text-2:#52525b; --text-3:#a1a1aa;
       --accent:#2563eb; --accent-hover:#1d4ed8; --accent-bg:#eff6ff; --accent-border:#bfdbfe;
       --success:#16a34a; --success-bg:#f0fdf4;
+      --error: #dc2626;
+      --error-bg: #fef2f2;
+      --error-border: #fecaca;
 
       --r-sm:.375rem; --r-md:.5rem; --r-lg:.75rem; --r-xl:1rem;
       --sh-sm:0 1px 3px rgba(0,0,0,.07),0 1px 2px rgba(0,0,0,.05);
@@ -45,7 +48,9 @@
       --ease:cubic-bezier(.16,1,.3,1); --t:160ms;
       --font:'Inter',system-ui,-apple-system,sans-serif;
       --w:1080px;
-    }
+
+}
+
     [data-theme="dark"] {
       --bg:#09090b; --bg-sub:#111113; --bg-off:#18181b;
       --border:#27272a; --border-hi:#3f3f46;
@@ -53,6 +58,7 @@
       --accent:#3b82f6; --accent-hover:#60a5fa; --accent-bg:#172554; --accent-border:#1e40af;
       --success:#4ade80; --success-bg:#14532d;
       --sh-sm:0 1px 3px rgba(0,0,0,.4); --sh-md:0 4px 16px rgba(0,0,0,.5); --sh-lg:0 12px 40px rgba(0,0,0,.6);
+      --error: #f87171; --error-bg: #450a0a; --error-border: #7f1d1d;
     }
 
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -127,6 +133,7 @@
     .badge-blue{background:var(--accent-bg);color:var(--accent);border:1px solid var(--accent-border)}
     .badge-green{background:var(--success-bg);color:var(--success);border:1px solid color-mix(in srgb,var(--success) 25%,transparent)}
     .badge-gray{background:var(--bg-off);color:var(--text-2);border:1px solid var(--border)}
+    .badge-red{background: var(--error-bg);color: var(--error);border: 1px solid var(--error-border);}
 
     /* YEAR SELECTOR */
     .year-selector{display:flex;align-items:center;gap:.4rem;background:var(--bg-off);border:1px solid var(--border);border-radius:var(--r-lg);padding:.3rem .4rem}
@@ -251,7 +258,7 @@
         <img src="./assets/logo.jpg" alt="Logo SCU Campania" width="56" height="56" style="border-radius:.4rem;object-fit:cover;display:block;">
       </span>
       <span class="logo-label">
-        <strong>SCU Campania</strong>
+        <strong>Delegazione SCU Campania</strong>
         <span>Rappresentanza Regionale</span>
       </span>
     </button>
@@ -454,8 +461,8 @@
       <div class="wrap">
         <div class="section-header">
           <div>
-            <p class="section-label">Tavoli Attivi 2026</p>
-            <h2 class="section-title" style="margin-bottom:0"> I 9 tavoli tematici:</h2>
+            <p class="section-label">Tavoli Attivi</p>
+            <h2 class="section-title" style="margin-bottom:0">Presentazione dei tavoli:</h2>
           </div>
           <button class="btn btn-ghost" data-page="contatti">Proponi un tema →</button>
         </div>
@@ -463,94 +470,47 @@
         <div class="tavoli-grid">
           <div class="tavolo">
             <p class="tavolo-number">Tavolo Rapporti Istituzionali</p>
-            <p> ❋ Gestione e sviluppo dei rapporti con le Istituzioni locali<br>
-                ❋ Coordinamento con i referenti delle altre funzioni per attività condivise<br>
-                ❋ Supporto alle delegazioni nella presentazione di istanze istituzionali<br>
-                ❋ Condivisione di buone pratiche tra Delegati e Delegazioni
-            </p>
+            <p>Il tavolo cura i rapporti con le istituzioni locali in modo continuativo, raccogliendo e presentando le istanze dei volontari con una linea comune e condivisa. Allo stesso tempo coordina il lavoro con gli altri referenti della rappresentanza e valorizza le buone pratiche tra delegati e delegazioni, così da rendere più efficace l’azione sul territorio.</p>
           </div>
 
           <div class="tavolo">
             <p class="tavolo-number">Tavolo Convenzioni</p>
-            <p> ❋ Analisi del quadro generale delle convenzioni esistenti<br>
-                ❋ Promozione del riconoscimento dell'operatore volontario nella società<br>
-                ❋ Sviluppo e proposta di nuove convenzioni con soggetti nazionali e locali<br>
-                ❋ Condivisione di buone pratiche tra delegazioni<br>
-                ❋ Coordinamento delle attività e delle opportunità a livello territoriale
-            </p>
+            <p>Il tavolo verifica il quadro delle convenzioni e delle agevolazioni già attive, promuovendo il riconoscimento dell’operatore volontario nella società e proponendo nuove convenzioni con soggetti pubblici e privati del territorio. Inoltre, favorisce il confronto tra delegazioni per condividere buone pratiche e coordinare opportunità utili in modo uniforme.</p>
           </div>
 
           <div class="tavolo">
             <p class="tavolo-number">Tavolo Formazione</p>
-            <p>
-                ❋ Preparazione e condivisione di materiali formativi (presentazioni, vademecum) per Delegati ed Enti<br>
-                ❋ Organizzazione di eventi formativi e informativi sul Servizio Civile Universale<br>
-                ❋ Definizione di strategie nazionali per il miglioramento della formazione sulla rappresentanza<br>
-                ❋ Monitoraggio delle attività formative delle delegazioni regionali, con eventuale partecipazione agli incontri<br>
-                ❋ Monitoraggio dei moduli di formazione, contatto con gli Enti e disponibilità a partecipare agli incontri formativi
-            </p>
+            <p>Il tavolo cura la preparazione di materiali formativi e informativi utili a delegati ed enti, organizzando anche momenti di confronto sul Servizio Civile Universale. Svolge inoltre un ruolo di coordinamento e monitoraggio delle attività formative sul territorio, seguendo i moduli, mantenendo i contatti con gli enti e partecipando agli incontri quando necessario.</p>
           </div>
 
           <div class="tavolo">
             <p class="tavolo-number">Tavolo Dibattito e Iniziative</p>
-            <p>
-                ❋ Monitoraggio dei temi di attualità rilevanti per il Servizio Civile e la società<br>
-                ❋ Raccolta e analisi delle idee e dei contributi dei Delegati<br>
-                ❋ Alimentare riflessioni e dibattiti interni alla Rappresentanza<br>
-                ❋ Proporre e organizzare iniziative ed eventi per condividere posizioni e sensibilizzare su temi specifici<br>
-                ❋ Supportare le altre funzioni fornendo spunti e dati utili per attività coordinate
-            </p>
+            <p>Il tavolo monitora i temi di attualità rilevanti per il Servizio Civile e per la società, raccoglie e analizza le idee dei Delegati, e alimenta il confronto interno alla Rappresentanza. In più, propone iniziative ed eventi per condividere posizioni e sensibilizzare su questioni specifiche, offrendo anche spunti e dati utili alle altre funzioni per attività coordinate.</p>
           </div>
 
           <div class="tavolo">
             <p class="tavolo-number">Tavolo Partecipazione</p>
-            <p>
-                ❋ Gestione della campagna elettorale<br>
-                ❋ Promozione della partecipazione degli operatori volontari<br>
-                ❋ Organizzazione delle assemblee regionali di presentazione dei candidati<br>
-                ❋ Promozione del Servizio Civile Regionale nel territorio di competenza
-            </p>
+            <p>Il tavolo gestisce la campagna elettorale, promuovendo attivamente la partecipazione degli operatori volontari e organizzando le assemblee regionali per presentare i candidati. Inoltre, valorizza e diffonde il Servizio Civile Regionale nel proprio territorio, favorendo una maggiore consapevolezza e coinvolgimento locale.</p>
           </div>
 
           <div class="tavolo">
             <p class="tavolo-number">Tavolo Raccolta e Analisi</p>
-            <p>
-                ❋ Raccolta e analisi di dati elettorali e partecipativi<br>
-                ❋ Raccolta di segnalazioni, dati normativi e statistici<br>
-                ❋ Elaborazione di studi e report per supportare le altre funzioni<br>
-                ❋ Creazione di strumenti informativi per agevolare riflessioni e decisioni della Rappresentanza<br>
-                ❋ Fornire basi fattuali e materiali per proposte e iniziative migliorative
-            </p>
+            <p>Il tavolo raccoglie e analizza dati elettorali, partecipativi, normativi e statistici, elaborando studi, report e strumenti informativi per supportare le altre funzioni della Rappresentanza. Inoltre, fornisce basi fattuali solide per favorire riflessioni condivise, decisioni informate e proposte concrete di miglioramento.</p>
           </div>
 
           <div class="tavolo">
             <p class="tavolo-number">Tavolo Normativa</p>
-            <p>
-                ❋ Presentazione di proposte di modifica dei Regolamenti e della Normativa nelle sedi opportune a livello nazionale<br>
-                ❋ Raccolta delle proposte di modifica dai Delegati e dagli Operatori Volontari a livello regionale (compito del Rappresentante Regionale)<br>
-                ❋ Analisi e revisione di documenti e testi normativi relativi a giovani, cittadinanza e tematiche affini<br>
-                ❋ Elaborazione di proposte che possano costituire base di interlocuzione con le istituzioni competenti<br>
-            </p>
+            <p>Il tavolo presenta proposte di modifica ai regolamenti e alla normativa nelle sedi istituzionali nazionali, raccogliendo sistematicamente input dai Delegati e operatori volontari a livello regionale. Inoltre, analizza e rivede documenti normativi su giovani, cittadinanza e temi affini, elaborando testi concreti come base per un dialogo efficace con le istituzioni competenti.</p>
           </div>
 
           <div class="tavolo">
             <p class="tavolo-number">Tavolo Comunicazione</p>
-            <p>
-                ❋ Promozione del Servizio Civile sul territorio<br>
-                ❋ Comunicazione delle attività e dei risultati della rappresentanza<br>
-                ❋ Scambio di buone pratiche tra Delegati<br>
-                ❋ Gestione e sviluppo dei canali di comunicazione<br>
-            </p>
+            <p>Il tavolo promuove attivamente il Servizio Civile sul territorio attraverso iniziative mirate, comunica in modo efficace le attività e i risultati della rappresentanza per aumentarne la visibilità. Gestisce e sviluppa i canali di comunicazione digitali e tradizionali, favorendo al contempo lo scambio di buone pratiche tra i Delegati per un impatto collettivo più forte e coordinato.</p>
           </div>
 
           <div class="tavolo">
             <p class="tavolo-number">Tavolo Segnalazioni</p>
-            <p>
-                ❋ Supporto alle Delegazioni nella gestione delle segnalazioni che coinvolgono il Dipartimento<br>
-                ❋ Richiesta di eventuali interventi ispettivi nei confronti degli Enti<br>
-                ❋ Proposte di modifica a regolamenti e FAQ, in collaborazione con la funzione Normativa e Regolamenti<br>
-                ❋ Prevenzione di nuove violazioni attraverso il miglioramento degli strumenti normativi
-            </p>
+            <p>Il tavolo supporta le Delegazioni nella gestione delle segnalazioni che coinvolgono il Dipartimento, richiedendo interventi ispettivi verso gli Enti quando necessario. Collabora con la funzione Normativa per proporre modifiche a regolamenti e FAQ, promuovendo la prevenzione di violazioni tramite strumenti normativi più efficaci e aggiornati.</p>
           </div>
         </div>
       </div>
@@ -631,7 +591,7 @@
               <h4>Canali diretti</h4>
               <div class="contact-link">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <span>Email: <a href="mailto:[EMAIL]">info@devocomprareildominio.it</a></span>
+                <span>Email: <a href="mailto:info@delegazionecampaniascu.com">info@delegazionecampaniascu.com</a></span>
               </div>
               <div class="contact-link">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -666,7 +626,7 @@
             </div>
             <div class="contact-item">
             <h4>Problemi con il sito?</h4>
-            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Per problemi o informazioni riguardanti il sito web contattare: <a href="mailto:assistenza@devocomprareildominio.it" style="color:var(--accent)">assistenza@devocomprareildominio.it</a></p>
+            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Per problemi o informazioni riguardanti il sito web contattare: <a href="mailto:assistenza@delegazionecampaniascu.com" style="color:var(--accent)">assistenza@delegazionecampaniascu.com</a></p>
             </div>
             <div class="contact-item">
               <h4>Questo sito è stato realizzato con ❤ da laky</h4>
@@ -685,104 +645,129 @@
       <div class="wrap">
         <p class="hero-eyebrow">Domande frequenti</p>
         <h1 class="hero-title" style="font-size:var(--text-xl);max-width:none">Hai una domanda? Abbiamo la risposta.</h1>
-        <p class="hero-sub" style="margin-bottom:0">Risposte alle domande più comuni sulla rappresentanza, i tavoli, i contatti e il funzionamento del SCU in Campania.</p>
+        <p class="hero-sub" style="margin-bottom:0">Risposte alle domande più comuni sulla rappresentanza, tavoli, contatti, pagamenti e il funzionamento del SCU in Campania.</p>
       </div>
     </div>
-
+    
+    <!-- FAQ RAPPRESENTANZA -->
     <div class="section">
       <div class="wrap">
+        <h2 class="section-title" style="display:flex;align-items:center;gap:0.4em"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>RAPPRESENTANZA</h2>
         <div class="faq-list">
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
-              <span>Cos'è la Rappresentanza SCU in Campania?</span>
+              <span>Cos'è la Rappresentanza degli Operatori Volontari?</span>
               <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-a"><p>È lo strumento istituzionale che permette agli operatori volontari del SCU di dialogare con la Regione Campania e il Dipartimento per le Politiche Giovanili. È articolata in delegati regionali e rappresentanti regionali, con raccordo nazionale tramite la Consulta SCU.</p></div>
+            <div class="faq-a"><p>La Rappresentanza è l'organo istituzionale previsto dal D.Lgs. 40/2017 che tutela gli interessi degli operatori volontari del Servizio Civile. <br>È articolata su base regionale — con Delegati e Rappresentanti regionali — e ha raccordo nazionale tramite la Consulta SCU, che interagisce direttamente con il Dipartimento per le Politiche Giovanili e il Servizio Civile Universale.</p></div>
           </div>
-
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
-              <span>Chi sono i delegati regionali?</span>
+              <span>Cos'è la Delegazione Regionale Campania?</span>
               <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-a"><p>Operatori volontari eletti dai loro pari durante il periodo di servizio. Favoriscono il raccordo con la Regione Campania e partecipano alle assemblee degli operatori sul territorio.</p></div>
+            <div class="faq-a"><p>È la struttura territoriale della Rappresentanza che opera nella regione Campania. Coordina i Delegati regionali, monitora le condizioni di servizio degli operatori volontari sul territorio, promuove iniziative locali e porta la voce della Campania nelle sedi istituzionali nazionali. <br>È il punto di riferimento diretto per tutti i volontari in servizio nella regione.</p></div>
           </div>
-
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
-              <span>Chi sono i rappresentanti regionali?</span>
+              <span>Chi sono i Delegati regionali?</span>
               <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-a"><p>Eletti dai delegati, partecipano alle assemblee nazionali e portano la voce della Campania nelle sedi istituzionali, inclusa la Consulta Nazionale.</p></div>
+            <div class="faq-a"><p>Sono operatori volontari eletti dai loro pari durante il periodo di servizio attivo. Il loro mandato consiste nel favorire il raccordo tra i volontari e le istituzioni locali, organizzare assemblee territoriali, raccogliere segnalazioni e contribuire alle attività della Delegazione. <br>Essendo volontari essi stessi, conoscono direttamente le difficoltà e i bisogni di chi è in servizio.</p></div>
           </div>
-
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
-              <span>Posso partecipare ai tavoli di lavoro?</span>
+              <span>Come posso contattare la Delegazione?</span>
               <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-a"><p>I tavoli sono aperti esclusivamente ai delegati in servizio in Campania. Per proposte scrivici dalla sezione Contatti indicando la tua proposta.</p></div>
+            <div class="faq-a"><p>Puoi scrivere all'indirizzo email info@delegazionecampaniascu.com oppure compilare il modulo di contatto presente su questo sito. <br>Cerchiamo di rispondere entro pochi giorni lavorativi. Per questioni urgenti o segnalazioni di criticità, ti invitiamo a indicarlo chiaramente nel messaggio così da dargli la priorità adeguata.</p></div>
           </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- FAQ CONTATTI E SEGNALAZIONI -->
+    <div class="section">
+      <div class="wrap">
+        <h2 class="section-title" style="display:flex;align-items:center;gap:0.4em"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle-warning-icon lucide-message-circle-warning"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>SEGNALAZIONI</h2>
+        <div class="faq-list">
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
-              <span>Quanti tavoli ci sono e di cosa si occupano?</span>
-              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-a"><p>Ci sono 9 tavoli tematici attivi: Rapporti Istituzionali, Convenzioni, Formazione, Dibattito e Iniziative, Partecipazione, Raccolta e Analisi, Normativa, Comunicazione e Segnalazioni. Trovi la descrizione completa nella sezione Tavoli.</p></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">
-              <span>Posso proporre un nuovo tema?</span>
-              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-a"><p>Sì. Scrivi dalla sezione Contatti con la tua proposta. Le idee vengono valutate dalla rappresentanza e portate nelle sedi opportune.</p></div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" aria-expanded="false">
-              <span>Come posso contattare la delegazione?</span>
+              <span>Come posso mettermi in contatto con la delegazione?</span>
               <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
             <div class="faq-a"><p>Usa il modulo nella sezione Contatti, scrivi all'email della delegazione oppure segui i canali social per aggiornamenti rapidi.</p></div>
           </div>
-
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
-              <span>In quanto tempo rispondete?</span>
+              <span>La Rappresentanza può intervenire direttamente nei conflitti tra volontario ed ente?</span>
               <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-a"><p>Entro 3–5 giorni lavorativi. Per urgenze usa il canale email diretto indicato nella sezione Contatti.</p></div>
+            <div class="faq-a"><p>La Delegazione analizza la segnalazione e valuta i passi più opportuni: può intervenire direttamente con l'ente, coinvolgere il Rappresentante regionale, o — nei casi più gravi — richiedere un intervento ispettivo al Dipartimento per le Politiche Giovanili. <br>Ti terremo aggiornato sull'esito delle azioni intraprese.</p></div>
           </div>
-
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
-              <span>Come segnalo un problema con il mio ente?</span>
+              <span>Cosa succede dopo che invio una segnalazione? Chi la gestisce e come?</span>
               <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-a"><p>Invia una segnalazione tramite il form Contatti specificando la natura del problema. Il Tavolo Segnalazioni gestisce il supporto agli operatori volontari per le criticità con gli enti.</p></div>
+            <div class="faq-a"><p>La segnalazione viene letta dalla Delegazione Regionale e, se pertinente, presa in carico dal Tavolo Segnalazioni. <br>Il tavolo valuta la situazione, supporta il volontario nell'indirizzarla alle sedi opportune tentando prima una mediazione e, se necessario, propone di richiedere un intervento ispettivo.</p></div>
           </div>
-
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
-              <span>Test?</span>
+              <span>Posso essere "licenziato" dal servizio civile da un ente? La Rappresentanza può intervenire?</span>
               <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div class="faq-a"><p>Test per capire come viene visualizzato sul sito</p></div>
+            <div class="faq-a"><p>No, l'ente non può unilateralmente interrompere il tuo servizio. L'unico soggetto che può disporre la revoca è il Dipartimento per le Politiche Giovanili, in caso di gravi inadempienze del volontario. <br>Se un ente ti chiede o ti forza a lasciare il servizio, è una violazione: segnalacelo immediatamente.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Se il mio ente non rispetta le ore o le mansioni previste, cosa posso fare?</span>
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><p>Parla prima con il tuo Operatore Locale di Progetto (OLP). Se il problema persiste, contatta la Delegazione Campania tramite il modulo di contatto. Tieni sempre una documentazione scritta delle anomalie — messaggi, email, orari effettivi — perché sarà utile in caso di segnalazione formale.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ PAGAMENTI -->
+    <div class="section">
+      <div class="wrap">
+        <h2 class="section-title" style="display:flex;align-items:center;gap:0.4em"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-landmark-icon lucide-landmark"><path d="M10 18v-7"/><path d="M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M3 22h18"/><path d="M6 18v-7"/></svg>PAGAMENTI</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Cosa fare se il mio ente non eroga l'assegno mensile nei tempi previsti?</span>
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><p>L'assegno mensile è erogato direttamente dal Dipartimento per le Politiche Giovanili, non dall'ente. Se non lo ricevi nei tempi previsti, il problema è quindi possibile che la tua banca stia ancora elaborando il pagamento. <br>Per i pagamenti previsti di Venerdì può capitare di dover attendere Lunedì per poterli visualizzare.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Cosa fare se non ho ricevuto l’assegno mensile?</span>
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><p>L’assegno mensile viene erogato direttamente dal Dipartimento per le Politiche Giovanili, qualora la data del pagamento è di Venerdì, consigliamo di attendere il giorno lavorativo successivo in quanto il bonifico potrebbe essere in elaborazione dalla tua banca.</p></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              <span>Cosa fare se ho ricevuto una cifra inferiore rispetto a quella prevista?</span>
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-a"><p>Il pagamento dell’assegno mensile è automatico e la cifra viene calcolata in base alle tue presenze, tenendo conto che i primi 15 giorni di malattia sono retribuiti e i restanti 15 non lo sono è probabile che tu abbia superato i giorni previsti e dunque non verranno retribuiti. <br>Ulteriore motivo per cui l’assegno può essere decurtato è per provvedimento disciplinare da parte del Dipartimento per le Politiche Giovanili.</p></div>
           </div>
         </div>
 
         <!-- SEZIONE CONTATTI NELLE FAQ -->
         <div class="faq-cta">
-            <p>Non hai trovato la risposta che cercavi?</p>
-            <button class="btn btn-solid" data-page="contatti">Scrivici nella sezione Contatti</button>
+          <p>Non hai trovato la risposta che cercavi?</p>
+          <button class="btn btn-solid" data-page="contatti">Scrivici nella sezione Contatti</button>
         </div>
       </div>
     </div>
-  </div>
+  </div>       
 
-  <!-- ══════════════ PRIVACY & NOTE LEGALI ══════════════ -->
+  <!-- ══════════════ INFORMATIVA PRIVACY & NOTE LEGALI ══════════════ -->
   <div class="page" id="page-privacy" role="region" aria-label="Privacy e Note Legali">
     <div class="hero" style="padding-bottom:var(--sp-10)">
       <div class="wrap">
@@ -792,6 +777,7 @@
       </div>
     </div>
 
+    <!-- INFORMATIVA PRIVACY -->
     <div class="section">
       <div class="wrap">
         <p class="section-label">Informativa Privacy</p>
@@ -800,15 +786,25 @@
         <div class="doc-list">
           <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
             <strong style="font-size:var(--text-sm)">Titolare del trattamento</strong>
-            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Delegazione Campania della Rappresentanza degli Operatori Volontari del Servizio Civile Universale, raggiungibile all'indirizzo email: <a href="mailto:info@devocomprareildominio.it" style="color:var(--accent)">info@devocomprareildominio.it</a></p>
+            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Il titolare del trattamento dei dati è la Delegazione Campania della Rappresentanza degli Operatori Volontari del Servizio Civile Universale, raggiungibile all'indirizzo email: <a href="mailto:info@delegazionecampaniascu.com" style="color:var(--accent)">info@delegazionecampaniascu.com</a><br></p>
+          </div>
+          <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
+            <strong style="font-size:var(--text-sm)">Responsabili del trattamento</strong>
+            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Il sito è ospitato tramite <u><a href="https://docs.github.com/en/site-policy/privacy-policies" target="_blank">GitHub Pages</a></u> (GitHub Inc., sussidiaria di Microsoft, USA) che processa i dati tecnici di navigazione. <br>
+              Il dominio è registrato tramite <u><a href="https://www.cloudflare.com/privacypolicy/" target="_blank">Cloudflare Inc.</a></u> (USA). <br>
+              I dati inviati tramite il modulo di contatto (nome, email, messaggio) sono trasmessi attraverso <u><a href="https://web3forms.com/privacy" target="_blank">Web3Forms</a></u>, che li processa e li inoltra alla nostra email senza conservarli. Potrebbero essere presenti log tecnici temporanei eliminati periodicamente.<br>
+              Tutti i soggetti operano nel rispetto del GDPR tramite Clausole Contrattuali Standard (SCC).<br>
+              <br>
+              <strong>Le informative privacy dei rispettivi siti sono accessibili facendo click sul nome.</strong>
+            </p>
           </div>
           <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
             <strong style="font-size:var(--text-sm)">Dati raccolti</strong>
-            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Il sito gimmyyy.github.io/rappresentanzascu raccoglie esclusivamente nome, cognome e indirizzo e-mail, forniti volontariamente dall'utente tramite il modulo di contatto.</p>
+            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Il sito https://delegazionecampaniascu.com raccoglie esclusivamente nome, cognome e indirizzo e-mail, forniti volontariamente dall'utente.</p>
           </div>
           <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
             <strong style="font-size:var(--text-sm)">Finalità e base giuridica</strong>
-            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">I dati sono trattati esclusivamente per rispondere alle richieste ricevute tramite il modulo di contatto. <br>Base giuridica: consenso dell'interessato (art. 6, par. 1, lett. a, GDPR).</p>
+            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">I dati sono trattati esclusivamente per rispondere alle richieste ricevute tramite il modulo o form di contatto. <br>Base giuridica: consenso dell'interessato (art. 6, par. 1, lett. a, GDPR)</p>
           </div>
           <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
             <strong style="font-size:var(--text-sm)">Conservazione</strong>
@@ -816,11 +812,11 @@
           </div>
           <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
             <strong style="font-size:var(--text-sm)">Comunicazione a terzi</strong>
-            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">I dati non sono ceduti, venduti né comunicati a soggetti terzi, salvo obblighi di legge. <br>Il servizio di invio del modulo è gestito tramite Web3Forms, il cui trattamento è disciplinato dalla propria informativa privacy.</p>
+            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">I dati non sono ceduti, venduti né comunicati a soggetti terzi, salvo obblighi di legge. <br>Il servizio di invio del modulo è gestito tramite Web3Forms, il cui trattamento è disciplinato dalla propria <u><a href="https://web3forms.com/privacy" target="_blank">informativa privacy</a></u>.</p>
           </div>
           <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
             <strong style="font-size:var(--text-sm)">Diritti dell'interessato</strong>
-            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">In qualsiasi momento puoi esercitare i diritti previsti dagli artt. 15–22 GDPR (accesso, rettifica, cancellazione, limitazione, opposizione, portabilità, revoca del consenso) scrivendo a: <a href="mailto:info@devocomprareildominio.it" style="color:var(--accent)">info@devocomprareildominio.it</a></p>
+            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">In qualsiasi momento puoi esercitare i diritti previsti dagli artt. 15–22 GDPR (accesso, rettifica, cancellazione, limitazione, opposizione, portabilità, revoca del consenso) scrivendo a: <a href="mailto:info@delegazionecampaniascu.com" style="color:var(--accent)">info@delegazionecampaniascu.com</a></p>
           </div>
           <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
             <strong style="font-size:var(--text-sm)">Reclami</strong>
@@ -830,6 +826,7 @@
       </div>
     </div>
 
+    <!-- NOTE LEGALI -->
     <div class="section">
       <div class="wrap">
         <p class="section-label">Note Legali</p>
@@ -845,11 +842,11 @@
           </div>
           <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
             <strong style="font-size:var(--text-sm)">Link esterni</strong>
-            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Il sito può contenere link a risorse esterne (Regione Campania, Dipartimento per le Politiche Giovanili, ecc.). <br>La Delegazione Campania SCU non è responsabile dei contenuti di siti terzi.</p>
+            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Il presente sito può contenere collegamenti ipertestuali a siti web di terze parti. Questi link sono forniti esclusivamente a scopo informativo e di approfondimento. La Delegazione Campania non ha alcun controllo sui contenuti di tali siti esterni e non si assume alcuna responsabilità per la loro accuratezza, completezza o aggiornamento, né per eventuali danni derivanti dalla loro consultazione. <br>La presenza di un link non implica alcuna forma di approvazione, sponsorizzazione o affiliazione con il sito collegato.</p>
           </div>
           <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
             <strong style="font-size:var(--text-sm)">Limitazione di responsabilità</strong>
-            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Le informazioni presenti nel sito hanno carattere informativo e istituzionale. <br>Per atti ufficiali fare sempre riferimento alle fonti istituzionali del Dipartimento per le Politiche Giovanili e della Regione Campania.</p>
+            <p style="font-size:var(--text-sm);color:var(--text-2);line-height:1.65">Il presente sito web è gestito dalla Delegazione Campania della Rappresentanza degli Operatori Volontari del Servizio Civile Universale a puro scopo informativo. I contenuti pubblicati non hanno carattere ufficiale o istituzionale e non sostituiscono le comunicazioni ufficiali del Dipartimento per le Politiche Giovanili e il Servizio Civile Universale, degli enti accreditati o di qualsiasi altra autorità competente. <br>La Delegazione Campania non si assume alcuna responsabilità per eventuali inesattezze, omissioni o aggiornamenti non tempestivi delle informazioni presenti sul sito. <br>Per informazioni ufficiali e vincolanti si rimanda ai canali istituzionali del <u><a href="https://www.politichegiovanili.gov.it/" target="_blank">Dipartimento per le Politiche Giovanili e il Servizio Civile Universale</a></u></p>
           </div>
           <div class="doc-row" style="flex-direction:column;align-items:flex-start;gap:.5rem">
             <strong style="font-size:var(--text-sm)">Aggiornamenti</strong>
