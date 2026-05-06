@@ -20,6 +20,7 @@ Spazio digitale dedicato agli operatori volontari del SCU in Campania: tavoli di
 | **Rappresentanza** | Delegati e rappresentanti regionali con selezione per anno |
 | **Tavoli** | I 9 tavoli tematici attivi con descrizione delle attività |
 | **Contatti** | Modulo di contatto, email, Instagram e canale WhatsApp |
+| **FAQ** | Le domande più frequenti sul SCU |
 
 ---
 
@@ -28,6 +29,8 @@ Spazio digitale dedicato agli operatori volontari del SCU in Campania: tavoli di
 - **HTML5** / **CSS3** / **JavaScript** vanilla — nessun framework esterno
 - **Font:** [Inter](https://fonts.google.com/specimen/Inter) via Google Fonts
 - **Hosting:** GitHub Pages
+- **Dominio:** Cloudfare Inc
+- **Form:** Web3Forms
 - **Dati delegati:** file `delegati.json` aggiornabile ogni anno senza toccare l'HTML
 
 ---
@@ -40,6 +43,7 @@ Spazio digitale dedicato agli operatori volontari del SCU in Campania: tavoli di
 ├── assets/
 │   ├── logo.jpg        # Logo SCU Campania
 │   └── favicon.ico     # Favicon
+├── CNAME
 └── README.md
 ```
 
@@ -63,9 +67,10 @@ Per aggiornare i delegati ogni anno è sufficiente modificare **solo** il file `
 ```
 
 I valori possibili per `badge` sono:
-- `"blue"` → Rappresentanti nazionali/regionali
-- `"green"` → Delegati regionali
+- `"blue"` → Rappresentanti Regionali/Nazionali
+- `"green"` → Delegati Regionali
 - `"gray"` → Anni storici / non applicabile
+- `"red"` → Errori o problami
 
 ---
 
