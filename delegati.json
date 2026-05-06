@@ -2,7 +2,7 @@
   "2026": [
     {
       "nome": "Corrado Capasso",
-      "ruolo": "Rappresentante Nazionale",
+      "ruolo": "Rappresentante Nazionale - Macroarea SUD",
       "badge": "blue",
       "email": "capa.corrado@gmail.com"
     },
@@ -14,7 +14,7 @@
     },
     {
       "nome": "Sabatino Fasulo",
-      "ruolo": "Vice Rappresentante Regionale",
+      "ruolo": "Vice-Rappresentante Regionale",
       "badge": "blue",
       "email": "fasulotino25@gmail.com"
     },
@@ -101,16 +101,100 @@
 
   "2025": [
     {
-      "nome": "NON APPLICABILE",
-      "ruolo": "Rappresentante Regionale Campania",
+      "nome": "Emanuele Occhipinti",
+      "ruolo": "Rappresentante Nazionale - Macroarea SUD",
       "badge": "gray",
-      "email": null
+      "email": "occhipinti.scu@gmail.com"
     },
     {
-      "nome": "NON APPLICABILE",
+      "nome": "Gennaro De Filippo",
+      "ruolo": "Rappresentante Regionale",
+      "badge": "gray",
+      "email": "gennydf96@gmail.com"
+    },
+    {
+      "nome": "Carlo Sorrentino",
+      "ruolo": "Vice-Rappresentante Regionale",
+      "badge": "gray",
+      "email": "info@sorrentinocarlo.it"
+    },
+    {
+      "nome": "Alessandra Boccia",
+      "ruolo": "Delegata Regionale",
+      "badge": "gray",
+      "email": "bocciaalessandra04@gmail.com"
+    },
+    {
+      "nome": "Marianna Buonocore",
+      "ruolo": "Delegata Regionale",
+      "badge": "gray",
+      "email": "marybuono01@gmail.com"
+    },
+    {
+      "nome": "Rosa Califano",
+      "ruolo": "Delegata Regionale",
+      "badge": "gray",
+      "email": "rosa.califano001@gmail.com"
+    },
+    {
+      "nome": "Giovanni Costanzo",
       "ruolo": "Delegato Regionale",
       "badge": "gray",
-      "email": null
+      "email": "giovanni.judo01@gmail.com"
+    },
+    {
+      "nome": "Antonio Dello Iaco",
+      "ruolo": "Delegato Regionale",
+      "badge": "gray",
+      "email": "antoniodelloiaco@gmail.com"
+    },
+    {
+      "nome": "Umberto di Matteo",
+      "ruolo": "Delegato Regionale",
+      "badge": "gray",
+      "email": "dimatteo_umberto2003@libero.it"
+    },
+    {
+      "nome": "Gaia Esposito",
+      "ruolo": "Delegata Regionale",
+      "badge": "gray",
+      "email": "gayaesposito99@outlook.it"
+    },
+    {
+      "nome": "Gennaro Esposito",
+      "ruolo": "Delegato Regionale",
+      "badge": "gray",
+      "email": "gennaropsp33@gmail.com"
+    },
+    {
+      "nome": "Gaia Lavorgna",
+      "ruolo": "Delegata Regionale",
+      "badge": "gray",
+      "email": "lavorgna0gaia@gmail.com"
+    },
+    {
+      "nome": "Sharon Martino",
+      "ruolo": "Delegata Regionale",
+      "badge": "gray",
+      "email": "martinosharon88@gmail.com"
+    },
+    {
+      "nome": "Vincenzo Nicastro",
+      "ruolo": "Delegato Regionale",
+      "badge": "gray",
+      "email": "vinznic1@gmail.com"
+    },
+    {
+      "nome": "Antonio Trametta",
+      "ruolo": "Delegato Regionale",
+      "badge": "gray",
+      "email": "antoniotrametta@libero.it"
+    },
+    {
+      "nome": "Veronica Vastola",
+      "ruolo": "Delegata Regionale",
+      "badge": "gray",
+      "email": "veronica_vastola@alice.it"
     }
   ],
 
