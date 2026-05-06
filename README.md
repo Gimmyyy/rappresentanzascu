@@ -2,7 +2,7 @@
 
 > Sito istituzionale della Rappresentanza degli Operatori Volontari del Servizio Civile Universale in Regione Campania.
 
-🌐 **[Visita il sito](https://gimmyyy.github.io/rappresentanzascu)**
+🌐 **[Visita il sito](https://delegazionecampaniascu.com)**
 
 ---
 
