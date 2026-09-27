@@ -1,4 +1,4 @@
-# 🇮🇹 Rappresentanza SCU – Regione Campania
+# Rappresentanza SCU – Regione Campania
 
 > Sito istituzionale della Rappresentanza degli Operatori Volontari del Servizio Civile Universale in Regione Campania.
 
