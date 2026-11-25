@@ -70,7 +70,7 @@ I valori possibili per `badge` sono:
 - `"blue"` → Rappresentanti Regionali/Nazionali
 - `"green"` → Delegati Regionali
 - `"gray"` → Anni storici / non applicabile
-- `"red"` → Errori o problami
+- `"red"` → Errori o problemi
 
 ---
 
